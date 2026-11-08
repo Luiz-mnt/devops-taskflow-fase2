@@ -1,18 +1,26 @@
 # Roteiro de demonstração — fase 2
 
-Abra Fase 2/devops-taskflow. A implementação da fase 1 pode ser consultada pela
-tag fase-1. Utilize dados fictícios e não mostre credenciais ao gravar capturas.
-As etapas de publicação e rollback devem ser marcadas pendentes até executadas.
+Abra Fase 2/devops-taskflow, cópia local usada para publicar a fase 2 no
+[repositório separado](https://github.com/Luiz-mnt/devops-taskflow-fase2).
+A fase 1 pode ser consultada pela
+[tag fase-1 original](https://github.com/Luiz-mnt/devops-taskflow/tree/fase-1).
+Utilize dados fictícios e não mostre credenciais ao gravar capturas. Registre
+publicação/deploy somente quando observados e rollback somente quando houver
+duas versões compatíveis e a demonstração tiver sido executada.
 
 ## 1. Histórico, PR e gates
 
-1. Mostre o planejamento e o código da tag fase-1.
-2. Mostre o PR #1, a falha intencional da execução 42489956044 e o bloqueio do CI.
-3. Mostre a remoção do teste controlado e a execução corrigida 42511228720:
+1. Mostre o planejamento e o código da tag fase-1 no repositório original.
+2. Mostre o [PR #1 original](https://github.com/Luiz-mnt/devops-taskflow/pull/1),
+   a [falha intencional 42489956044](https://github.com/Luiz-mnt/devops-taskflow/actions/runs/42489956044)
+   e o bloqueio do CI, mantendo esse PR sem merge.
+3. Mostre a remoção do teste controlado e o
+   [CI corrigido 42511228720](https://github.com/Luiz-mnt/devops-taskflow/actions/runs/42511228720):
    qualidade/testes, Terraform e build/scan aprovados; publicação omitida em PR.
-4. Após a integração autorizada, mostre o run de main e os jobs encadeados,
-   os relatórios, o digest no GHCR e o deploy temporário. Não trate a execução
-   de PR como prova de publicação ou de CD.
+4. No [Actions da fase 2](https://github.com/Luiz-mnt/devops-taskflow-fase2/actions),
+   mostre a execução real da main do novo repositório e seus jobs encadeados,
+   relatórios, digest GHCR e deploy temporário depois de concluídos. Identifique
+   URL e commit dessa execução. O CI histórico de PR não comprova esse CD.
 
 ## 2. Laboratório e configuração
 

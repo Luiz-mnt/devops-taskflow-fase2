@@ -83,8 +83,9 @@ pública segura. Também não há backup de produção nem restauração automat
 
 ## Integridade e permissões do pipeline
 
-O [workflow](../.github/workflows/ci.yml) usa actions fixadas por SHA, limites de
-tempo e permissão global `contents: read`. Pull requests validam qualidade,
+O [workflow](../.github/workflows/ci.yml) do repositório separado
+[devops-taskflow-fase2](https://github.com/Luiz-mnt/devops-taskflow-fase2)
+usa actions fixadas por SHA, limites de tempo e permissão global `contents: read`. Pull requests validam qualidade,
 testes, IaC e build/scan, sem publicar pacotes ou acessar segredos de deploy.
 
 O job `publish` recebe `packages: write` e `contents: read`. O job `deploy-demo`
@@ -138,5 +139,6 @@ escopo e validade, sem desligar os gates de forma geral.
 Os resultados acima são **locais**, não atribuídos a uma execução remota que
 ainda não foi observada nesta documentação. Consulte as provas e os detalhes
 atualizados em [segurança da fase 2](evidencias/fase2-security.md) e nas
-[evidências locais](evidencias/fase2-local/). Os relatórios do CD deverão manter
-identificados commit, digest, ambiente e URL da execução correspondente.
+[evidências locais](evidencias/fase2-local/). Os relatórios do CD do novo repositório deverão manter
+identificados commit, digest, ambiente e URL da execução correspondente. As
+provas históricas de fase 1 e PR continuam vinculadas ao repositório original.

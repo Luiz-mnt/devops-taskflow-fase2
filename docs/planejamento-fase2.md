@@ -2,10 +2,13 @@
 
 Aluno: Luiz Eduardo Santos Monteiro. Projeto: TaskFlow API, DevOps na Prática.
 
-Esta fase evolui o mesmo [repositório](https://github.com/Luiz-mnt/devops-taskflow)
-da fase 1. A [tag fase-1](https://github.com/Luiz-mnt/devops-taskflow/tree/fase-1)
-preserva a implementação inicial aprovada. O pacote e o documento finais da
-fase 1 permanecem separados dos arquivos desta fase.
+Esta fase evolui a TaskFlow API no repositório separado
+[devops-taskflow-fase2](https://github.com/Luiz-mnt/devops-taskflow-fase2).
+O [repositório original](https://github.com/Luiz-mnt/devops-taskflow), sua main,
+o PR #1 e a [tag fase-1](https://github.com/Luiz-mnt/devops-taskflow/tree/fase-1)
+permanecem preservados. O CD será executado na main do repositório da fase 2,
+sem integrar o PR original. O pacote e os documentos finais da fase 1
+continuam separados dos arquivos desta fase.
 
 ## Objetivo e requisitos
 
@@ -45,7 +48,7 @@ se restringe aos containers, à rede e ao volume dessa execução remota.
 ## Fluxo e critérios de aprovação
 
 Pull request executa qualidade, testes, validação IaC e build/scan sem publicar.
-Push em main publica somente depois da aprovação dos gates. A imagem aprovada
+Push em main no repositório da fase 2 publica somente depois da aprovação dos gates. A imagem aprovada
 é transferida para a publicação sem reconstrução. O digest resultante identifica
 o artefato que o deploy consome.
 
@@ -55,10 +58,12 @@ a aprovação do fluxo correspondente. Relatórios devem ser preservados também
 em falhas. Vulnerabilidades sem correção são registradas separadamente;
 qualquer exceção exige motivo, escopo e validade explícitos.
 
-Uma falha controlada em um teste de PR deve demonstrar o bloqueio antes da
-correção e integração. Rollback usa uma imagem anterior compatível quando
-disponível e não reverte alterações no banco. Os resultados finais constarão
-do resumo verificável e das evidências, sem transformar este plano em prova.
+A falha controlada já demonstrou o bloqueio no PR #1 do repositório original:
+execução 42489956044. A remoção do teste intencional foi validada na execução
+42511228720; ambas permanecem como evidências históricas nesse repositório.
+Rollback usa uma imagem anterior compatível quando disponível e não reverte
+alterações no banco. Os resultados do novo CD constarão do resumo verificável
+e das evidências somente depois de observados.
 
 ## Limites e melhorias futuras
 

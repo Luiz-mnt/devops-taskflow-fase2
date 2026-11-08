@@ -1,7 +1,7 @@
 {
-  "timestamp": "2026-11-08T15:54:51-03:00",
-  "repository_url": "https://github.com/Luiz-mnt/devops-taskflow",
-  "workflow_url": "https://github.com/Luiz-mnt/devops-taskflow/blob/main/.github/workflows/ci.yml",
+  "timestamp": "2026-11-08T20:32:48.336963+00:00",
+  "repository_url": "https://github.com/Luiz-mnt/devops-taskflow-fase2",
+  "workflow_url": "https://github.com/Luiz-mnt/devops-taskflow-fase2/blob/main/.github/workflows/ci.yml",
   "phase1_commit": "30b49c595e931f1ea6c2e122ba4ca25ead004b48",
   "phase1_tag": "fase-1",
   "phase1_ci_run_url": "https://github.com/Luiz-mnt/devops-taskflow/actions/runs/42485447573",
@@ -36,10 +36,10 @@
   "rollback_result": "Não executado: ainda não há dois digests publicados para demonstrar rollback compatível.",
   "persistence_result": "Local inicial aprovado: tarefa id 2 preservada após recriar a API; container mudou e UID 10001 confirmado.",
   "pending_items": [
-    "Publicação GHCR e execução do CD em main: não executadas, conforme escolha de manter o PR sem integração",
-    "Deploy local pela imagem publicada e rollback para digest anterior compatível",
-    "Tag fase-2 depois das validações remotas completas",
-    "PDF final de submissão com evidências reais do CD"
+    "Publicar a implementação e executar CI/CD no repositório separado",
+    "Registrar digest GHCR e validar deploy local da imagem publicada",
+    "Criar tag fase-2 no commit validado",
+    "Consolidar e revisar PDF final com evidências reais do CD"
   ],
   "delivery_ready": false,
   "measurement_commands": [
@@ -223,6 +223,11 @@
   "local_test_timestamp": "2026-11-08T18:38:35Z",
   "prometheus_target_status": "UP no laboratório local",
   "integration_authorized": false,
-  "requested_repository_action": "Manter somente o PR, sem integrar",
-  "delivery_status": "Prévia para revisão. Implementação e CI do PR aprovados; CD não executado porque o PR permanecerá sem merge por escolha do estudante."
+  "requested_repository_action": "Criar repositório público separado devops-taskflow-fase2 e concluir a entrega nele",
+  "delivery_status": "Conclusão autorizada em repositório separado. Repositório original, main, tag fase-1 e PR #1 preservados. Publicação e CD do novo repositório ainda serão executados.",
+  "phase1_repository_url": "https://github.com/Luiz-mnt/devops-taskflow",
+  "phase1_tag_url": "https://github.com/Luiz-mnt/devops-taskflow/tree/fase-1",
+  "phase1_main_preserved": "2612b5d037bca23e3441deba46461ad4a487592e",
+  "original_pr_action": "Manter somente o PR #1 no repositório original, sem integrar",
+  "separate_repository_publication_authorized": true
 }

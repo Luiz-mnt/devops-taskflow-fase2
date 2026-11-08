@@ -1,8 +1,13 @@
-# TaskFlow API — DevOps na Prática, fases 1 e 2
+# TaskFlow API — DevOps na Prática, fase 2
 
 Aluno: **Luiz Eduardo Santos Monteiro**. Projeto acadêmico da PUCRS.
 
-Repositório público: https://github.com/Luiz-mnt/devops-taskflow
+Repositório público da fase 2: https://github.com/Luiz-mnt/devops-taskflow-fase2
+
+A fase 2 dá continuidade ao projeto em um repositório separado. O
+[repositório original da fase 1](https://github.com/Luiz-mnt/devops-taskflow),
+sua main, a tag fase-1 e o PR #1 permanecem preservados. Os links de
+execuções anteriores continuam apontando para o repositório em que ocorreram.
 
 **Fase 1 concluída e verificada:** 32 testes locais e 32 testes no GitHub Actions,
 cobertura de linhas/branches 100%, Ruff e Terraform aprovados. Rede e volume
@@ -14,17 +19,27 @@ GitHub Actions e infraestrutura Docker descrita em Terraform. A fase 1 cobre
 planejamento, CI e IaC. Containers da aplicação, Prometheus e entrega contínua
 pertencem à fase 2 e não são necessários para executar esta API no ambiente virtual.
 
-## Situação da fase 2 — PR mantido sem integração
+## Situação da fase 2 — entrega em repositório separado
 
-Código e CI do [PR #1](https://github.com/Luiz-mnt/devops-taskflow/pull/1)
-aprovados: 38 testes, 100% de linhas/branches, auditoria e build/scan.
-O estudante escolheu manter o PR sem merge. Portanto, publicação no GHCR,
-execução real do CD e tag fase-2 **não foram realizadas**. O documento da fase 2
-é uma prévia para revisão e não deve ser tratado como entrega completa.
+A implementação foi validada localmente e no
+[PR #1 histórico](https://github.com/Luiz-mnt/devops-taskflow/pull/1):
+38 testes, 100% de linhas/branches, auditoria e build/scan aprovados na
+execução 42511228720. O último CI desse PR, 42513263161, também aprovou
+qualidade, Terraform e build/scan; publicação e deploy foram omitidos no PR.
+
+A conclusão do CD será feita na main de devops-taskflow-fase2, sem integrar
+o PR no repositório original. A publicação GHCR, o deploy automatizado, o
+digest e a tag fase-2 permanecem pendentes de comprovação neste relatório.
+A apresentação existente é uma prévia até a consolidação dos resultados
+dessa execução e do PDF final.
+
+[Workflow da fase 2](https://github.com/Luiz-mnt/devops-taskflow-fase2/blob/main/.github/workflows/ci.yml) ·
+[Actions da fase 2](https://github.com/Luiz-mnt/devops-taskflow-fase2/actions).
 
 [Relatório factual](docs/relatorio-fase2.md) ·
 [Checklist da fase 2](docs/checklist-entrega.md) ·
-[CI aprovado do PR](https://github.com/Luiz-mnt/devops-taskflow/actions/runs/42511228720).
+[CI histórico com relatórios](https://github.com/Luiz-mnt/devops-taskflow/actions/runs/42511228720) ·
+[Último CI do PR original](https://github.com/Luiz-mnt/devops-taskflow/actions/runs/42513263161).
 
 ## Documentação e comprovação
 
@@ -136,16 +151,18 @@ segredos não são versionados. O `.terraform.lock.hcl` é versionado.
 configuração, **sem criar infraestrutura**. Somente `plan`/`apply` com Docker
 acessível comprovam provisionamento. O CI está configurado para executar uma
 demonstração em runner efêmero, com prefixo exclusivo e limpeza desses recursos.
-Essa etapa foi aprovada na execução registrada, incluindo inspeções, plano
-sem alterações e limpeza dos recursos efêmeros. O laboratório WSL2 local
-foi comprovado separadamente e permanece preservado.
+A demonstração da fase 1 foi aprovada na execução histórica 42485447573,
+incluindo inspeções, plano sem alterações e limpeza dos recursos efêmeros.
+O provisionamento da nova execução de CD da fase 2 será registrado
+separadamente. O laboratório WSL2 local foi comprovado e permanece preservado.
 
 Não há `destroy` automático do laboratório local. Alterar o prefixo pode planejar
 a substituição do volume: revise o plano antes de aplicar para preservar dados.
 
 ## Pipeline
 
-O workflow `.github/workflows/ci.yml` executa em push e pull request para `main`.
+O workflow `.github/workflows/ci.yml` deste repositório da fase 2 executa
+em push e pull request para `main`, além de acionamento manual.
 Os jobs verificam Ruff, testes com cobertura mínima de 80%, auditoria das
 dependências de produção/desenvolvimento e formatação/validação Terraform.
 Build/scan constrói uma imagem Linux amd64 e inventaria suas vulnerabilidades.
@@ -226,12 +243,12 @@ pelo fluxo oficial do registry com read:packages; não coloque tokens no Git.
 A visibilidade do repositório não determina automaticamente a do pacote.
 
 ```bash
-export IMAGE_REF=ghcr.io/luiz-mnt/devops-taskflow@sha256:DIGEST_REAL_DO_RELATORIO
+export IMAGE_REF=ghcr.io/luiz-mnt/devops-taskflow-fase2@sha256:DIGEST_REAL_DO_RELATORIO
 docker pull "$IMAGE_REF"
 bash scripts/deploy.sh
 bash scripts/smoke.sh
 # Quando houver um digest anterior compatível:
-bash scripts/rollback.sh ghcr.io/luiz-mnt/devops-taskflow@sha256:DIGEST_ANTERIOR
+bash scripts/rollback.sh ghcr.io/luiz-mnt/devops-taskflow-fase2@sha256:DIGEST_ANTERIOR
 ```
 
 Substitua os nomes em maiúsculas pelos digests medidos no relatório. O caminho

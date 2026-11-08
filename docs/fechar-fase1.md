@@ -11,8 +11,10 @@ efêmeros do runner. O laboratório local permanece preservado.
 
 Os documentos finais em main consolidam as evidências depois da execução; a tag
 mantém o commit verificado da implementação. Não mova a tag para acompanhar
-atualizações documentais. A futura fase 2 evoluirá o mesmo repositório e terá
-sua própria referência após validação.
+atualizações documentais. A fase 2 dá continuidade à API no repositório
+separado [devops-taskflow-fase2](https://github.com/Luiz-mnt/devops-taskflow-fase2),
+preservando a main, a tag e o PR #1 originais. Sua própria referência será
+criada depois da validação da fase 2.
 
 As evidências permanentes estão em `docs/evidencias/ci/42485447573/`. O documento
 da disciplina é o PDF/PPTX final em `../entrega-fase1/`, com os links da execução,
