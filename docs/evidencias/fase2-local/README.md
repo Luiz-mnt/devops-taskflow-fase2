@@ -23,3 +23,10 @@ do runner serão apresentados separadamente com o commit e URL de sua execução
 O estado Terraform foi copiado explicitamente da fase 1 para dar continuidade
 aos recursos. O estado ativo passa a ser o da fase 2; não execute applies
 simultâneos nas duas pastas. Não foi feito destroy do laboratório local.
+
+## Validação da imagem pública GHCR
+
+Em `imagem-publicada/`, pull anônimo com DOCKER_CONFIG vazio, deploy pelo digest,
+smoke, saúde, métricas, logs, alvo UP/consulta up=1 e persistência após recriar a API.
+A rede e o volume existentes foram preservados; plan final sem mudanças (exit 0).
+As medições antigas deste diretório continuam identificadas como locais/iniciais.

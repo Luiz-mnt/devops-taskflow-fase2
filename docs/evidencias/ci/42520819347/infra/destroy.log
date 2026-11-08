@@ -1,0 +1,71 @@
+docker_volume.taskflow: Refreshing state... [id=taskflow-ci-42520819347-1-data]
+docker_network.taskflow: Refreshing state... [id=16941f674288480c4398131a5fd0acbdada69b0859f18b3bcc064b8028ab3ccf]
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  - destroy
+
+Terraform will perform the following actions:
+
+  # docker_network.taskflow will be destroyed
+  - resource "docker_network" "taskflow" {
+      - attachable   = false -> null
+      - driver       = "bridge" -> null
+      - id           = "16941f674288480c4398131a5fd0acbdada69b0859f18b3bcc064b8028ab3ccf" -> null
+      - ingress      = false -> null
+      - internal     = false -> null
+      - ipam_driver  = "default" -> null
+      - ipam_options = {} -> null
+      - ipv6         = false -> null
+      - name         = "taskflow-ci-42520819347-1-net" -> null
+      - options      = {} -> null
+      - scope        = "local" -> null
+
+      - ipam_config {
+          - aux_address = {} -> null
+          - gateway     = "172.18.0.1" -> null
+          - subnet      = "172.18.0.0/16" -> null
+            # (1 unchanged attribute hidden)
+        }
+
+      - labels {
+          - label = "com.taskflow.environment" -> null
+          - value = "taskflow-ci-42520819347-1" -> null
+        }
+      - labels {
+          - label = "com.taskflow.managed-by" -> null
+          - value = "terraform" -> null
+        }
+    }
+
+  # docker_volume.taskflow will be destroyed
+  - resource "docker_volume" "taskflow" {
+      - driver      = "local" -> null
+      - driver_opts = {} -> null
+      - id          = "taskflow-ci-42520819347-1-data" -> null
+      - mountpoint  = "/var/lib/docker/volumes/taskflow-ci-42520819347-1-data/_data" -> null
+      - name        = "taskflow-ci-42520819347-1-data" -> null
+
+      - labels {
+          - label = "com.taskflow.environment" -> null
+          - value = "taskflow-ci-42520819347-1" -> null
+        }
+      - labels {
+          - label = "com.taskflow.managed-by" -> null
+          - value = "terraform" -> null
+        }
+    }
+
+Plan: 0 to add, 0 to change, 2 to destroy.
+
+Changes to Outputs:
+  - network_id   = "16941f674288480c4398131a5fd0acbdada69b0859f18b3bcc064b8028ab3ccf" -> null
+  - network_name = "taskflow-ci-42520819347-1-net" -> null
+  - volume_id    = "taskflow-ci-42520819347-1-data" -> null
+  - volume_name  = "taskflow-ci-42520819347-1-data" -> null
+docker_volume.taskflow: Destroying... [id=taskflow-ci-42520819347-1-data]
+docker_network.taskflow: Destroying... [id=16941f674288480c4398131a5fd0acbdada69b0859f18b3bcc064b8028ab3ccf]
+docker_volume.taskflow: Destruction complete after 2s
+docker_network.taskflow: Destruction complete after 2s
+
+Destroy complete! Resources: 2 destroyed.

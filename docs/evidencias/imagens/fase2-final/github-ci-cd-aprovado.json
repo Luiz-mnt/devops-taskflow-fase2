@@ -1,0 +1,13 @@
+{
+  "file": "github-ci-cd-aprovado.png",
+  "source_url": "https://github.com/Luiz-mnt/devops-taskflow-fase2/actions/runs/42520819347",
+  "started_at_utc": "2026-11-08T23:36:12.613398+00:00",
+  "captured_at_utc": "2026-11-08T23:36:17.964058+00:00",
+  "dimensions": [
+    1600,
+    1300
+  ],
+  "sha256": "365dffe334b79b1719350752d8137a454ff44351bed016ec3045d40f59770b3d",
+  "kind": "Captura real de interface com Chrome headless, perfil isolado e sem autenticação pessoal",
+  "context": "CI/CD completo do commit 78fe0c2; seis jobs aprovados no novo repositório."
+}

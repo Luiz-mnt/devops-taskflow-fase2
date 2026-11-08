@@ -1,0 +1,49 @@
+[
+    {
+        "Name": "taskflow-ci-42520819347-1-net",
+        "Id": "b19a42a1f234ed8460cc783ce3ed73e8a9cd2c11adcce7a1a87aebb9d70ea3a8",
+        "Created": "2026-11-08T20:36:19.900528829Z",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv4": true,
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": [
+                {
+                    "Subnet": "172.18.0.0/16",
+                    "Gateway": "172.18.0.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {
+            "bafb208175db91c6cd1d417a1bc5245ef1b579a336d52ee59e9a5163389a8f92": {
+                "Name": "taskflow-demo-42520819347-1-prometheus-1",
+                "EndpointID": "e71af3b4c4411914ed0764db1f480bf40e653e8c5ab9e7435774f3ca38af5769",
+                "MacAddress": "2e:2c:33:c1:cd:22",
+                "IPv4Address": "172.18.0.3/16",
+                "IPv6Address": ""
+            },
+            "c2c900c5afe25ad1036b5f05b2e846c485914c391feef7ddc7f0cbba2a4d7e99": {
+                "Name": "taskflow-demo-42520819347-1-api-1",
+                "EndpointID": "29bf549314f311799e3050bf7012ca4da3c9b4737a78b8672e85e7159590cf13",
+                "MacAddress": "5e:75:2e:6b:ed:88",
+                "IPv4Address": "172.18.0.2/16",
+                "IPv6Address": ""
+            }
+        },
+        "Options": {},
+        "Labels": {
+            "com.taskflow.environment": "taskflow-ci-42520819347-1",
+            "com.taskflow.managed-by": "terraform"
+        }
+    }
+]

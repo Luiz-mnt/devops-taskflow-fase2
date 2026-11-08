@@ -1,0 +1,13 @@
+{
+  "file": "github-pacote-publico.png",
+  "source_url": "https://github.com/users/Luiz-mnt/packages/container/package/devops-taskflow-fase2",
+  "started_at_utc": "2026-11-08T23:36:14.777543+00:00",
+  "captured_at_utc": "2026-11-08T23:36:19.576301+00:00",
+  "dimensions": [
+    1600,
+    1200
+  ],
+  "sha256": "b50528af374dd8b45e898637beb64cb1ee57680df72b769c3279b4d30c63f335",
+  "kind": "Captura real de interface com Chrome headless, perfil isolado e sem autenticação pessoal",
+  "context": "Pacote GHCR publicado pelo CI/CD da fase 2 e tornado público pelo proprietário."
+}

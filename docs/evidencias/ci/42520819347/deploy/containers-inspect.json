@@ -1,0 +1,609 @@
+[
+    {
+        "Id": "c2c900c5afe25ad1036b5f05b2e846c485914c391feef7ddc7f0cbba2a4d7e99",
+        "Created": "2026-11-08T20:36:31.471691091Z",
+        "Path": "python",
+        "Args": [
+            "-m",
+            "uvicorn",
+            "app.main:app",
+            "--host",
+            "0.0.0.0",
+            "--port",
+            "8000",
+            "--workers",
+            "1",
+            "--no-access-log"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 2916,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-11-08T20:36:31.504638125Z",
+            "FinishedAt": "0001-01-01T00:00:00Z",
+            "Health": {
+                "Status": "healthy",
+                "FailingStreak": 0,
+                "Log": [
+                    {
+                        "Start": "2026-11-08T20:36:36.711606343Z",
+                        "End": "2026-11-08T20:36:37.029216669Z",
+                        "ExitCode": 0,
+                        "Output": ""
+                    }
+                ]
+            }
+        },
+        "Image": "sha256:e7dc805de61db984319ecef80b03afdb954900b5ae936b39bf7be4eee69edb8f",
+        "ResolvConfPath": "/var/lib/docker/containers/c2c900c5afe25ad1036b5f05b2e846c485914c391feef7ddc7f0cbba2a4d7e99/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/c2c900c5afe25ad1036b5f05b2e846c485914c391feef7ddc7f0cbba2a4d7e99/hostname",
+        "HostsPath": "/var/lib/docker/containers/c2c900c5afe25ad1036b5f05b2e846c485914c391feef7ddc7f0cbba2a4d7e99/hosts",
+        "LogPath": "/var/lib/docker/containers/c2c900c5afe25ad1036b5f05b2e846c485914c391feef7ddc7f0cbba2a4d7e99/c2c900c5afe25ad1036b5f05b2e846c485914c391feef7ddc7f0cbba2a4d7e99-json.log",
+        "Name": "/taskflow-demo-42520819347-1-api-1",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "docker-default",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": [
+                "taskflow-ci-42520819347-1-data:/data:rw"
+            ],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "taskflow-ci-42520819347-1-net",
+            "PortBindings": {
+                "8000/tcp": [
+                    {
+                        "HostIp": "127.0.0.1",
+                        "HostPort": "8000"
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "unless-stopped",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": [
+                "ALL"
+            ],
+            "CgroupnsMode": "private",
+            "Dns": null,
+            "DnsOptions": null,
+            "DnsSearch": null,
+            "ExtraHosts": [],
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": true,
+            "SecurityOpt": [
+                "no-new-privileges:true"
+            ],
+            "Tmpfs": {
+                "/tmp": "rw,noexec,nosuid,size=16m"
+            },
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 268435456,
+            "NanoCpus": 1000000000,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 536870912,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware",
+                "/sys/devices/virtual/powercap"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": {
+                "ID": "c2c900c5afe25ad1036b5f05b2e846c485914c391feef7ddc7f0cbba2a4d7e99",
+                "LowerDir": "/var/lib/docker/overlay2/c26b4ff6716c593fe4b7ba3110dd7cf2935df188132515bde3027816f40f57b9-init/diff:/var/lib/docker/overlay2/cc8e43882f1e2f9f843d925b964cf32e3c2117774ca0b106d56245f7df0f33e1/diff:/var/lib/docker/overlay2/85cf69e1226ab091056b272d1ada189861ecb3be6f75aa341373709273c93a45/diff:/var/lib/docker/overlay2/79eb1be30e87d93b7dc9b2ec95303d6bb0e12d035d1c7e58a8c941e0cd1fc3c6/diff:/var/lib/docker/overlay2/bd35defefd9975e7603acab766fb3a3eec38804e8c7b693a16fd04caf74c6f16/diff:/var/lib/docker/overlay2/497cfd17099298248b5caec096f3fcdead75e57d16ae4fce43b104170568b269/diff:/var/lib/docker/overlay2/fbfcfad1701e163c2d5bcae8245632345fa5c198ab040729caff6179dd4ff3be/diff:/var/lib/docker/overlay2/44dea702f450125785ccca67019a10e6f664628091be784dbcfa804f83988de7/diff:/var/lib/docker/overlay2/3553872755cc8aa256b75c0c960d4812e7082dc68f3d2ef257a7d3e3a009904d/diff",
+                "MergedDir": "/var/lib/docker/overlay2/c26b4ff6716c593fe4b7ba3110dd7cf2935df188132515bde3027816f40f57b9/merged",
+                "UpperDir": "/var/lib/docker/overlay2/c26b4ff6716c593fe4b7ba3110dd7cf2935df188132515bde3027816f40f57b9/diff",
+                "WorkDir": "/var/lib/docker/overlay2/c26b4ff6716c593fe4b7ba3110dd7cf2935df188132515bde3027816f40f57b9/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [
+            {
+                "Type": "volume",
+                "Name": "taskflow-ci-42520819347-1-data",
+                "Source": "/var/lib/docker/volumes/taskflow-ci-42520819347-1-data/_data",
+                "Destination": "/data",
+                "Driver": "local",
+                "Mode": "rw",
+                "RW": true,
+                "Propagation": ""
+            }
+        ],
+        "Config": {
+            "Hostname": "c2c900c5afe2",
+            "Domainname": "",
+            "User": "10001:10001",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "ExposedPorts": {
+                "8000/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "TASKFLOW_DB_PATH=/data/taskflow.db",
+                "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LANG=C.UTF-8",
+                "GPG_KEY=7169605F62C751356D054A26A821E680E5FA6305",
+                "PYTHON_VERSION=3.12.16",
+                "PYTHON_SHA256=b5796915dc45ff745cfb4e990a7e7c93d6f546328a102ce31448d69ebc37575c",
+                "PYTHONDONTWRITEBYTECODE=1",
+                "PYTHONUNBUFFERED=1",
+                "PIP_NO_CACHE_DIR=1"
+            ],
+            "Cmd": [
+                "python",
+                "-m",
+                "uvicorn",
+                "app.main:app",
+                "--host",
+                "0.0.0.0",
+                "--port",
+                "8000",
+                "--workers",
+                "1",
+                "--no-access-log"
+            ],
+            "Healthcheck": {
+                "Test": [
+                    "CMD",
+                    "python",
+                    "-c",
+                    "import json, urllib.request; response = json.load(urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=2)); assert response == {'status': 'healthy', 'database': 'ok'}"
+                ],
+                "Interval": 10000000000,
+                "Timeout": 3000000000,
+                "StartPeriod": 10000000000,
+                "Retries": 5
+            },
+            "Image": "ghcr.io/luiz-mnt/devops-taskflow-fase2@sha256:d25cad8350c946d5a3c1f646c1309be2fd1b6d82d1e7f83bd9924d90d8c4708d",
+            "Volumes": null,
+            "WorkingDir": "/app",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": {
+                "com.docker.compose.config-hash": "38f62821102e97b945ee0ac0a62c78895db84f460bb483df325cec7c352f5623",
+                "com.docker.compose.container-number": "1",
+                "com.docker.compose.depends_on": "",
+                "com.docker.compose.image": "sha256:e7dc805de61db984319ecef80b03afdb954900b5ae936b39bf7be4eee69edb8f",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "taskflow-demo-42520819347-1",
+                "com.docker.compose.project.config_files": "/home/runner/work/devops-taskflow-fase2/devops-taskflow-fase2/compose.yaml",
+                "com.docker.compose.project.working_dir": "/home/runner/work/devops-taskflow-fase2/devops-taskflow-fase2",
+                "com.docker.compose.service": "api",
+                "com.docker.compose.version": "2.38.2",
+                "org.opencontainers.image.description": "Laboratório acadêmico de CI/CD, tarefas e observabilidade",
+                "org.opencontainers.image.revision": "78fe0c236a426ec035a0a2d9daea218f083316a6",
+                "org.opencontainers.image.source": "https://github.com/Luiz-mnt/devops-taskflow-fase2",
+                "org.opencontainers.image.title": "TaskFlow API"
+            }
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "6ef4896912b260a3339f5f9837c122ed1f1343844663e8fc381cf04296591ad4",
+            "SandboxKey": "/var/run/docker/netns/6ef4896912b2",
+            "Ports": {
+                "8000/tcp": [
+                    {
+                        "HostIp": "127.0.0.1",
+                        "HostPort": "8000"
+                    }
+                ]
+            },
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "",
+            "Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "",
+            "IPPrefixLen": 0,
+            "IPv6Gateway": "",
+            "MacAddress": "",
+            "Networks": {
+                "taskflow-ci-42520819347-1-net": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "taskflow-demo-42520819347-1-api-1",
+                        "api"
+                    ],
+                    "MacAddress": "5e:75:2e:6b:ed:88",
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "b19a42a1f234ed8460cc783ce3ed73e8a9cd2c11adcce7a1a87aebb9d70ea3a8",
+                    "EndpointID": "29bf549314f311799e3050bf7012ca4da3c9b4737a78b8672e85e7159590cf13",
+                    "Gateway": "172.18.0.1",
+                    "IPAddress": "172.18.0.2",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": [
+                        "taskflow-demo-42520819347-1-api-1",
+                        "api",
+                        "c2c900c5afe2"
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "Id": "bafb208175db91c6cd1d417a1bc5245ef1b579a336d52ee59e9a5163389a8f92",
+        "Created": "2026-11-08T20:36:31.486420907Z",
+        "Path": "/bin/prometheus",
+        "Args": [
+            "--config.file=/etc/prometheus/prometheus.yml",
+            "--storage.tsdb.path=/prometheus",
+            "--storage.tsdb.retention.time=6h",
+            "--web.listen-address=0.0.0.0:9090"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 3029,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-11-08T20:36:37.218479819Z",
+            "FinishedAt": "0001-01-01T00:00:00Z",
+            "Health": {
+                "Status": "healthy",
+                "FailingStreak": 0,
+                "Log": [
+                    {
+                        "Start": "2026-11-08T20:36:42.352085259Z",
+                        "End": "2026-11-08T20:36:42.386293763Z",
+                        "ExitCode": 0,
+                        "Output": ""
+                    }
+                ]
+            }
+        },
+        "Image": "sha256:9bd9cbec4bd4f33bb6ccedf8c25a5132f8e7b2fb158c9a223a54485e4332e962",
+        "ResolvConfPath": "/var/lib/docker/containers/bafb208175db91c6cd1d417a1bc5245ef1b579a336d52ee59e9a5163389a8f92/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/bafb208175db91c6cd1d417a1bc5245ef1b579a336d52ee59e9a5163389a8f92/hostname",
+        "HostsPath": "/var/lib/docker/containers/bafb208175db91c6cd1d417a1bc5245ef1b579a336d52ee59e9a5163389a8f92/hosts",
+        "LogPath": "/var/lib/docker/containers/bafb208175db91c6cd1d417a1bc5245ef1b579a336d52ee59e9a5163389a8f92/bafb208175db91c6cd1d417a1bc5245ef1b579a336d52ee59e9a5163389a8f92-json.log",
+        "Name": "/taskflow-demo-42520819347-1-prometheus-1",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "docker-default",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": [
+                "/home/runner/work/devops-taskflow-fase2/devops-taskflow-fase2/monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro"
+            ],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "taskflow-ci-42520819347-1-net",
+            "PortBindings": {
+                "9090/tcp": [
+                    {
+                        "HostIp": "127.0.0.1",
+                        "HostPort": "9090"
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "unless-stopped",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": [
+                "ALL"
+            ],
+            "CgroupnsMode": "private",
+            "Dns": null,
+            "DnsOptions": null,
+            "DnsSearch": null,
+            "ExtraHosts": [],
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": true,
+            "SecurityOpt": [
+                "no-new-privileges:true"
+            ],
+            "Tmpfs": {
+                "/prometheus": "rw,noexec,nosuid,size=256m,uid=65534,gid=65534,mode=0700",
+                "/tmp": "rw,noexec,nosuid,size=16m"
+            },
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 536870912,
+            "NanoCpus": 1000000000,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 1073741824,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware",
+                "/sys/devices/virtual/powercap"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": {
+                "ID": "bafb208175db91c6cd1d417a1bc5245ef1b579a336d52ee59e9a5163389a8f92",
+                "LowerDir": "/var/lib/docker/overlay2/ec2042d29c5c68673682b19d6c922ffc8e2f44a21d51d74f5ec8bc6a791753b7-init/diff:/var/lib/docker/overlay2/e2337ecd12c227ca276035b70e4754e2d01ad063d05db7d87315bc408cd8109b/diff:/var/lib/docker/overlay2/bddae3567959a27c8b8b2b0c2f0aa0c9f6775ac03f772a6d6a12faa3c101c577/diff:/var/lib/docker/overlay2/7cb47436844257fe8827357a6489bbedd3e7863a850a3ca60b7fd7f5a4131308/diff:/var/lib/docker/overlay2/5bb7455ac2ef0768f2ae83a76c2368160a50033fdf6462b5d3b2e5d99fe68e5e/diff:/var/lib/docker/overlay2/75abc04f3df1a748600cb42d73358f2c8c040fb67a1481aa6f2cbc5eae72db28/diff:/var/lib/docker/overlay2/fcb35c4e47d9b9080119faaaf9e1aa82544a13692ac8656200c6aca1574fb97c/diff:/var/lib/docker/overlay2/750c3763e411b6ebdecc8deaa5b1e7e68ee182702dec1bf9bc92be7fa2a586c7/diff:/var/lib/docker/overlay2/b2d266771e6874294ae6dbf23c1ef230bc120a9932f77ee18fdf7d1475af9f55/diff:/var/lib/docker/overlay2/4046e1491662f82e3e5d9b804583d5a03afc93258f4e429a48bba4aedf32bab8/diff",
+                "MergedDir": "/var/lib/docker/overlay2/ec2042d29c5c68673682b19d6c922ffc8e2f44a21d51d74f5ec8bc6a791753b7/merged",
+                "UpperDir": "/var/lib/docker/overlay2/ec2042d29c5c68673682b19d6c922ffc8e2f44a21d51d74f5ec8bc6a791753b7/diff",
+                "WorkDir": "/var/lib/docker/overlay2/ec2042d29c5c68673682b19d6c922ffc8e2f44a21d51d74f5ec8bc6a791753b7/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [
+            {
+                "Type": "bind",
+                "Source": "/home/runner/work/devops-taskflow-fase2/devops-taskflow-fase2/monitoring/prometheus.yml",
+                "Destination": "/etc/prometheus/prometheus.yml",
+                "Mode": "ro",
+                "RW": false,
+                "Propagation": "rprivate"
+            }
+        ],
+        "Config": {
+            "Hostname": "bafb208175db",
+            "Domainname": "",
+            "User": "65534:65534",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "ExposedPorts": {
+                "9090/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Cmd": [
+                "--config.file=/etc/prometheus/prometheus.yml",
+                "--storage.tsdb.path=/prometheus",
+                "--storage.tsdb.retention.time=6h",
+                "--web.listen-address=0.0.0.0:9090"
+            ],
+            "Healthcheck": {
+                "Test": [
+                    "CMD",
+                    "wget",
+                    "--spider",
+                    "--quiet",
+                    "http://127.0.0.1:9090/-/ready"
+                ],
+                "Interval": 5000000000,
+                "Timeout": 3000000000,
+                "StartPeriod": 10000000000,
+                "Retries": 12
+            },
+            "Image": "prom/prometheus:v3.16.0@sha256:89c1a644817e9ad70fa2af76c84898e327c1de7063735f962e8313b1e28672c3",
+            "Volumes": {
+                "/prometheus": {}
+            },
+            "WorkingDir": "/prometheus",
+            "Entrypoint": [
+                "/bin/prometheus"
+            ],
+            "OnBuild": null,
+            "Labels": {
+                "com.docker.compose.config-hash": "dd2186abb7953b4fc2841d0d9040083ca30ec1065b11ac103913a2b8152fe1ed",
+                "com.docker.compose.container-number": "1",
+                "com.docker.compose.depends_on": "api:service_healthy:false",
+                "com.docker.compose.image": "sha256:9bd9cbec4bd4f33bb6ccedf8c25a5132f8e7b2fb158c9a223a54485e4332e962",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "taskflow-demo-42520819347-1",
+                "com.docker.compose.project.config_files": "/home/runner/work/devops-taskflow-fase2/devops-taskflow-fase2/compose.yaml",
+                "com.docker.compose.project.working_dir": "/home/runner/work/devops-taskflow-fase2/devops-taskflow-fase2",
+                "com.docker.compose.service": "prometheus",
+                "com.docker.compose.version": "2.38.2",
+                "io.prometheus.image.variant": "busybox",
+                "maintainer": "The Prometheus Authors <prometheus-developers@googlegroups.com>",
+                "org.opencontainers.image.authors": "The Prometheus Authors",
+                "org.opencontainers.image.description": "The Prometheus monitoring system and time series database",
+                "org.opencontainers.image.documentation": "https://prometheus.io/docs",
+                "org.opencontainers.image.licenses": "Apache License 2.0",
+                "org.opencontainers.image.source": "https://github.com/prometheus/prometheus",
+                "org.opencontainers.image.title": "Prometheus",
+                "org.opencontainers.image.url": "https://github.com/prometheus/prometheus",
+                "org.opencontainers.image.vendor": "Prometheus"
+            }
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "85a768797e32ce9bc06a5650b714c8e824900c6e517e7e2624396aa6d8bd9bfb",
+            "SandboxKey": "/var/run/docker/netns/85a768797e32",
+            "Ports": {
+                "9090/tcp": [
+                    {
+                        "HostIp": "127.0.0.1",
+                        "HostPort": "9090"
+                    }
+                ]
+            },
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "",
+            "Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "",
+            "IPPrefixLen": 0,
+            "IPv6Gateway": "",
+            "MacAddress": "",
+            "Networks": {
+                "taskflow-ci-42520819347-1-net": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "taskflow-demo-42520819347-1-prometheus-1",
+                        "prometheus"
+                    ],
+                    "MacAddress": "2e:2c:33:c1:cd:22",
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "b19a42a1f234ed8460cc783ce3ed73e8a9cd2c11adcce7a1a87aebb9d70ea3a8",
+                    "EndpointID": "e71af3b4c4411914ed0764db1f480bf40e653e8c5ab9e7435774f3ca38af5769",
+                    "Gateway": "172.18.0.1",
+                    "IPAddress": "172.18.0.3",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": [
+                        "taskflow-demo-42520819347-1-prometheus-1",
+                        "prometheus",
+                        "bafb208175db"
+                    ]
+                }
+            }
+        }
+    }
+]

@@ -1,0 +1,34 @@
+[
+    {
+        "Name": "taskflow-ci-42520819347-1-net",
+        "Id": "16941f674288480c4398131a5fd0acbdada69b0859f18b3bcc064b8028ab3ccf",
+        "Created": "2026-11-08T20:35:08.249294008Z",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv4": true,
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": [
+                {
+                    "Subnet": "172.18.0.0/16",
+                    "Gateway": "172.18.0.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {},
+        "Options": {},
+        "Labels": {
+            "com.taskflow.environment": "taskflow-ci-42520819347-1",
+            "com.taskflow.managed-by": "terraform"
+        }
+    }
+]

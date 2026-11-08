@@ -1,0 +1,32 @@
+prometheus-1  | 2026-11-08T20:36:37.381541444Z time=2026-11-08T20:36:37.381Z level=INFO source=main.go:1793 msg="updated GOGC" old=100 new=75
+prometheus-1  | 2026-11-08T20:36:37.381778238Z time=2026-11-08T20:36:37.381Z level=INFO source=main.go:830 msg="Updating GOMAXPROCS=1: determined from CPU quota" component=automaxprocs
+prometheus-1  | 2026-11-08T20:36:37.382145355Z time=2026-11-08T20:36:37.382Z level=INFO source=memlimit.go:177 msg="GOMEMLIMIT is updated" component=automemlimit package=github.com/KimMachineGun/automemlimit/memlimit GOMEMLIMIT=483183820 previous=9223372036854775807
+prometheus-1  | 2026-11-08T20:36:37.383016075Z time=2026-11-08T20:36:37.382Z level=INFO source=main.go:939 msg="Starting Prometheus Server" mode=server version="(version=3.16.0, branch=HEAD, revision=e2e28adeee2c5883d000fc82aca6008cfbf7e96d)"
+prometheus-1  | 2026-11-08T20:36:37.383029660Z time=2026-11-08T20:36:37.382Z level=INFO source=main.go:944 msg="operational information" build_context="(go=go1.27.3, platform=linux/amd64, user=root@880187fc0808, date=20261105-15:13:16, tags=netgo,builtinassets)" host_details="(Linux 7.0.0-1017-azure #17~24.04.1-Ubuntu SMP PREEMPT Thu Sep 24 18:46:57 UTC 2026 x86_64 bafb208175db (none))" fd_limits="(soft=65536, hard=65536)" vm_limits="(soft=unlimited, hard=unlimited)"
+prometheus-1  | 2026-11-08T20:36:37.477304428Z time=2026-11-08T20:36:37.477Z level=INFO source=web.go:731 msg="Start listening for connections" component=web address=0.0.0.0:9090
+prometheus-1  | 2026-11-08T20:36:37.477769729Z time=2026-11-08T20:36:37.477Z level=INFO source=main.go:1521 msg="Starting TSDB ..."
+prometheus-1  | 2026-11-08T20:36:37.482802389Z time=2026-11-08T20:36:37.482Z level=INFO source=head.go:762 msg="Replaying on-disk memory mappable chunks if any" component=tsdb
+prometheus-1  | 2026-11-08T20:36:37.482819320Z time=2026-11-08T20:36:37.482Z level=INFO source=head.go:847 msg="On-disk memory mappable chunks replay completed" component=tsdb duration=1.352µs
+prometheus-1  | 2026-11-08T20:36:37.482824550Z time=2026-11-08T20:36:37.482Z level=INFO source=head.go:855 msg="Replaying WAL, this may take a while" component=tsdb
+prometheus-1  | 2026-11-08T20:36:37.485589856Z time=2026-11-08T20:36:37.485Z level=INFO source=tls_config.go:395 msg="Listening on" component=web address=[::]:9090
+prometheus-1  | 2026-11-08T20:36:37.485606247Z time=2026-11-08T20:36:37.485Z level=INFO source=tls_config.go:398 msg="TLS is disabled." component=web http2=false address=[::]:9090
+prometheus-1  | 2026-11-08T20:36:37.485664135Z time=2026-11-08T20:36:37.485Z level=INFO source=head.go:950 msg="WAL segment loaded" component=tsdb segment=0 maxSegment=0 duration=2.815089ms
+prometheus-1  | 2026-11-08T20:36:37.485671429Z time=2026-11-08T20:36:37.485Z level=INFO source=head.go:987 msg="WAL replay completed" component=tsdb checkpoint_replay_duration=29.535µs wal_replay_duration=2.844804ms wbl_replay_duration=170ns chunk_snapshot_load_duration=0s mmap_chunk_replay_duration=1.352µs total_replay_duration=2.894187ms
+prometheus-1  | 2026-11-08T20:36:37.489544488Z time=2026-11-08T20:36:37.489Z level=INFO source=main.go:1542 msg="filesystem information" fs_type=TMPFS_MAGIC
+prometheus-1  | 2026-11-08T20:36:37.489557863Z time=2026-11-08T20:36:37.489Z level=INFO source=main.go:1545 msg="TSDB started"
+prometheus-1  | 2026-11-08T20:36:37.489562131Z time=2026-11-08T20:36:37.489Z level=INFO source=main.go:1744 msg="Loading configuration file" filename=/etc/prometheus/prometheus.yml
+prometheus-1  | 2026-11-08T20:36:37.489753890Z time=2026-11-08T20:36:37.489Z level=INFO source=main.go:1148 msg="TSDB retention updated" duration=6h size=0B percentage=0
+prometheus-1  | 2026-11-08T20:36:37.490116689Z time=2026-11-08T20:36:37.490Z level=INFO source=main.go:1786 msg="Completed loading of configuration file" db_storage=29.145µs remote_storage=1.834µs web_handler=240ns query_engine=962ns scrape=300.302µs scrape_sd=15.92µs notify=1.082µs notify_sd=531ns rules=1.313µs tracing=5.23µs filename=/etc/prometheus/prometheus.yml totalDuration=565.328µs
+prometheus-1  | 2026-11-08T20:36:37.490129423Z time=2026-11-08T20:36:37.490Z level=INFO source=main.go:1506 msg="Server is ready to receive web requests."
+prometheus-1  | 2026-11-08T20:36:37.490203892Z time=2026-11-08T20:36:37.490Z level=INFO source=manager.go:235 msg="Starting rule manager..." component="rule manager"
+api-1         | 2026-11-08T20:36:32.578604866Z INFO:     Started server process [1]
+api-1         | 2026-11-08T20:36:32.578661563Z INFO:     Waiting for application startup.
+api-1         | 2026-11-08T20:36:32.580876859Z INFO:     Application startup complete.
+api-1         | 2026-11-08T20:36:32.581190906Z INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+api-1         | 2026-11-08T20:36:37.018436978Z {"timestamp":"2026-11-08T20:36:37.018236+00:00","event":"http_request","method":"GET","route":"/health","status_code":200,"duration_seconds":0.013869}
+api-1         | 2026-11-08T20:36:42.878584323Z {"timestamp":"2026-11-08T20:36:42.878217+00:00","event":"http_request","method":"GET","route":"/metrics","status_code":200,"duration_seconds":0.001539}
+api-1         | 2026-11-08T20:36:43.042249260Z {"timestamp":"2026-11-08T20:36:43.042072+00:00","event":"http_request","method":"GET","route":"/health","status_code":200,"duration_seconds":0.001368}
+api-1         | 2026-11-08T20:36:43.046092905Z {"timestamp":"2026-11-08T20:36:43.045809+00:00","event":"http_request","method":"POST","route":"/tasks","status_code":201,"duration_seconds":0.00245}
+api-1         | 2026-11-08T20:36:43.048044587Z {"timestamp":"2026-11-08T20:36:43.047884+00:00","event":"http_request","method":"GET","route":"/tasks","status_code":200,"duration_seconds":0.001118}
+api-1         | 2026-11-08T20:36:43.051284120Z {"timestamp":"2026-11-08T20:36:43.051023+00:00","event":"http_request","method":"PATCH","route":"/tasks/{task_id}","status_code":200,"duration_seconds":0.002249}
+api-1         | 2026-11-08T20:36:43.054033941Z {"timestamp":"2026-11-08T20:36:43.053837+00:00","event":"http_request","method":"GET","route":"/metrics","status_code":200,"duration_seconds":0.001787}

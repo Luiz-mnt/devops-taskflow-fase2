@@ -1,45 +1,42 @@
 {
-  "timestamp": "2026-11-08T20:32:48.336963+00:00",
+  "timestamp": "2026-11-08T23:40:12.505097+00:00",
   "repository_url": "https://github.com/Luiz-mnt/devops-taskflow-fase2",
-  "workflow_url": "https://github.com/Luiz-mnt/devops-taskflow-fase2/blob/main/.github/workflows/ci.yml",
+  "workflow_url": "https://github.com/Luiz-mnt/devops-taskflow-fase2/blob/fase-2/.github/workflows/ci.yml",
   "phase1_commit": "30b49c595e931f1ea6c2e122ba4ca25ead004b48",
   "phase1_tag": "fase-1",
   "phase1_ci_run_url": "https://github.com/Luiz-mnt/devops-taskflow/actions/runs/42485447573",
   "phase1_results": "Concluída: 32 testes e 100% de linhas/branches; CI e IaC local/remoto aprovados.",
-  "phase2_commit": "b5cc28f0fc3538779ac3f432d2c4c5aaf548619d",
-  "phase2_tag": null,
-  "ci_run_url": "https://github.com/Luiz-mnt/devops-taskflow/actions/runs/42511228720",
-  "ci_head_sha": "b5cc28f0fc3538779ac3f432d2c4c5aaf548619d",
+  "phase2_commit": "78fe0c236a426ec035a0a2d9daea218f083316a6",
+  "phase2_tag": "fase-2",
+  "ci_run_url": "https://github.com/Luiz-mnt/devops-taskflow-fase2/actions/runs/42520819347",
+  "ci_head_sha": "78fe0c236a426ec035a0a2d9daea218f083316a6",
   "ci_conclusion": "success",
-  "cd_run_url": null,
-  "cd_head_sha": null,
-  "cd_conclusion": null,
-  "image_digest": null,
-  "image_ref": null,
+  "cd_run_url": "https://github.com/Luiz-mnt/devops-taskflow-fase2/actions/runs/42520819347",
+  "cd_head_sha": "78fe0c236a426ec035a0a2d9daea218f083316a6",
+  "cd_conclusion": "success",
+  "image_digest": "sha256:d25cad8350c946d5a3c1f646c1309be2fd1b6d82d1e7f83bd9924d90d8c4708d",
+  "image_ref": "ghcr.io/luiz-mnt/devops-taskflow-fase2@sha256:d25cad8350c946d5a3c1f646c1309be2fd1b6d82d1e7f83bd9924d90d8c4708d",
   "local_image_id": "sha256:cef08e6e44c70b4756816c6b11eeaa8039c7b9877c1e3ae57d73ade56aeac6ab",
   "local_image_config_id": "sha256:cc95a9a65754045b2b6f54614d96a79acbb98808c58d3a094cf80749089da2b4",
   "test_count": 38,
   "tests_passed": 38,
   "coverage_percent": 100.0,
   "branch_coverage_percent": 100.0,
-  "test_duration_seconds": 1.29,
-  "test_environment": "Ubuntu 24.04 / CPython 3.12.16, CI do PR",
-  "test_timestamp": "2026-11-08T18:41:30.722612+00:00",
-  "terraform_result": "Local: plan sem mudanças, exit 0. PR: fmt/init/validate aprovados. Provisionamento/CD de main ainda não executados.",
-  "smoke_result": "Local: saúde SQLite, criar/listar/concluir e métricas aprovados. Smoke de CD ainda não executado.",
-  "monitoring_result": "Laboratório local: Prometheus taskflow-api UP e consulta up=1.",
-  "security_result": "PR aprovado: pip-audit 50 pacotes Linux sem vulnerabilidades identificadas; Trivy 0 HIGH/CRITICAL corrigíveis e 42 sem correção informada.",
-  "pip_audit_result": "PR/Linux: 50 pacotes e zero vulnerabilidades identificadas; local/Windows: 51 pacotes e zero (colorama condicionado à plataforma).",
-  "image_scan_result": "Local e PR: zero HIGH/CRITICAL corrigíveis; 40 HIGH e 2 CRITICAL sem correção informada.",
+  "test_duration_seconds": 1.22,
+  "test_environment": "Ubuntu 24.04 / CPython 3.12.16, CI/CD do novo repositório",
+  "test_timestamp": "2026-11-08T20:34:48.779213+00:00",
+  "terraform_result": "CI/CD: rede e volume criados, inspecionados e destruídos nos runners; replan sem mudanças. Local: rede/volume preservados e plan exit 0.",
+  "smoke_result": "CD pelo digest aprovado: saúde SQLite, criar/listar/concluir, métricas e Prometheus UP; laboratório pela mesma imagem também aprovado.",
+  "monitoring_result": "CD e laboratório: alvo taskflow-api UP e consulta up=1 aprovados.",
+  "security_result": "CI/CD: pip-audit 50 pacotes Linux, zero vulnerabilidades identificadas; Trivy zero HIGH/CRITICAL corrigíveis, 40 HIGH e 2 CRITICAL sem correção informada.",
+  "pip_audit_result": "CI/CD Linux: 50 pacotes auditados e zero vulnerabilidades identificadas.",
+  "image_scan_result": "CI/CD: zero HIGH/CRITICAL corrigíveis; 40 HIGH e 2 CRITICAL sem correção informada.",
   "controlled_failure_run_url": "https://github.com/Luiz-mnt/devops-taskflow/actions/runs/42489956044",
   "pr_url": "https://github.com/Luiz-mnt/devops-taskflow/pull/1",
-  "rollback_result": "Não executado: ainda não há dois digests publicados para demonstrar rollback compatível.",
-  "persistence_result": "Local inicial aprovado: tarefa id 2 preservada após recriar a API; container mudou e UID 10001 confirmado.",
+  "rollback_result": "Script disponível; demonstração condicionada a um segundo digest publicado compatível. A primeira execução publicou somente uma imagem.",
+  "persistence_result": "Imagem GHCR: tarefa id 5 preservada após recriar a API; container mudou; UID/GID 10001 confirmado.",
   "pending_items": [
-    "Publicar a implementação e executar CI/CD no repositório separado",
-    "Registrar digest GHCR e validar deploy local da imagem publicada",
-    "Criar tag fase-2 no commit validado",
-    "Consolidar e revisar PDF final com evidências reais do CD"
+    "Consolidar, revisar e empacotar o documento final de submissão"
   ],
   "delivery_ready": false,
   "measurement_commands": [
@@ -65,46 +62,66 @@
       "url": "https://github.com/Luiz-mnt/devops-taskflow/actions/runs/42489956044"
     },
     {
-      "path": "docs/evidencias/imagens/fase2-pr/github-ci-pr-aprovado.png",
-      "title": "CI do PR aprovado — sem integração",
-      "caption": "Execução 42511228720: qualidade/testes, Terraform e build/scan aprovados. Publicação GHCR e deploy aparecem pulados; o PR permanece sem integração.",
+      "path": "docs/evidencias/imagens/fase2-final/github-ci-cd-aprovado.png",
+      "title": "CI/CD completo — seis jobs aprovados",
+      "caption": "Execução real 42520819347 no novo repositório: validação, build/scan, publicação GHCR e deploy pelo digest aprovados. O ambiente temporário foi limpo após os testes.",
       "source_slide": 3,
       "crop": [
         20,
         185,
         1570,
-        680
+        685
       ],
-      "url": "https://github.com/Luiz-mnt/devops-taskflow/actions/runs/42511228720"
+      "url": "https://github.com/Luiz-mnt/devops-taskflow-fase2/actions/runs/42520819347"
     },
     {
-      "path": "docs/evidencias/imagens/fase2-pr/api-docs-local-inicial.png",
-      "title": "API local — interface OpenAPI",
-      "caption": "Captura real inicial do laboratório local, com rotas de tarefas e saúde. Não é evidência de publicação GHCR ou CD remoto.",
+      "path": "docs/evidencias/imagens/fase2-final/github-pacote-publico.png",
+      "title": "GHCR — imagem publicada e pública",
+      "caption": "Página real do pacote, com visibilidade Public e tag vinculada ao commit 78fe0c2. Pull anônimo confirmado separadamente no laboratório.",
+      "source_slide": 5,
+      "crop": [
+        280,
+        185,
+        1290,
+        690
+      ],
+      "url": "https://github.com/users/Luiz-mnt/packages/container/package/devops-taskflow-fase2"
+    },
+    {
+      "path": "docs/evidencias/ci/42520819347/deploy/smoke.log",
+      "title": "CD — smoke e observabilidade aprovados",
+      "caption": "Registro real do runner: saúde SQLite, criar/listar/concluir, alvo Prometheus UP e consulta up=1, executados após baixar a imagem pelo digest publicado.",
+      "source_slide": 3,
+      "url": "https://github.com/Luiz-mnt/devops-taskflow-fase2/actions/runs/42520819347"
+    },
+    {
+      "path": "docs/evidencias/imagens/fase2-final/api-imagem-publicada.png",
+      "title": "API local — imagem publicada pelo digest",
+      "caption": "Interface OpenAPI real da API executada no laboratório a partir da imagem pública GHCR validada pelo CI/CD.",
       "source_slide": 9,
       "crop": [
         65,
         40,
         1515,
-        485
+        520
       ]
     },
     {
-      "path": "docs/evidencias/imagens/fase2-pr/prometheus-targets-local-inicial.png",
+      "path": "docs/evidencias/imagens/fase2-final/prometheus-imagem-publicada.png",
       "title": "Prometheus local — alvo UP",
-      "caption": "Captura real inicial do laboratório local: alvo taskflow-api UP. A publicação da imagem e o CD em main não foram executados.",
+      "caption": "Interface real do Prometheus no laboratório com imagem publicada. A consulta up=1 também foi validada pelo smoke e preservada em JSON.",
       "source_slide": 10,
       "crop": [
         0,
         0,
         1585,
-        300
+        350
       ]
     },
     {
-      "path": "docs/evidencias/fase2-local/pasta-final/smoke-pasta-final.log",
-      "title": "Smoke local — saúde, CRUD e Prometheus",
-      "caption": "Registro de terminal real na pasta Fase 2: CRUD e alvo UP aprovados, consulta up=1. O arquivo integral está no projeto; não é captura da interface GitHub.",
+      "path": "docs/evidencias/fase2-local/imagem-publicada/smoke-after-recreate.log",
+      "title": "Laboratório — validação após recriar a API",
+      "caption": "Registro real de terminal: saúde/CRUD e Prometheus aprovados após recriar a API. A tarefa de persistência permaneceu no volume externo.",
       "source_slide": 10
     }
   ],
@@ -214,9 +231,9 @@
     "passed": true
   },
   "phase2_candidate_commit": "b5cc28f0fc3538779ac3f432d2c4c5aaf548619d",
-  "ci_event": "pull_request",
-  "ci_status_description": "CI do PR aprovado; publicação e CD omitidos nesse evento",
-  "test_junit_duration_seconds": 1.305,
+  "ci_event": "push",
+  "ci_status_description": "CI/CD completo aprovado em push no repositório separado",
+  "test_junit_duration_seconds": 1.23,
   "local_test_count": 38,
   "local_test_duration_seconds": 5.55,
   "local_test_environment": "Windows / CPython 3.12.16, pasta Fase 2",
@@ -224,10 +241,24 @@
   "prometheus_target_status": "UP no laboratório local",
   "integration_authorized": false,
   "requested_repository_action": "Criar repositório público separado devops-taskflow-fase2 e concluir a entrega nele",
-  "delivery_status": "Conclusão autorizada em repositório separado. Repositório original, main, tag fase-1 e PR #1 preservados. Publicação e CD do novo repositório ainda serão executados.",
+  "delivery_status": "Implementação, CI/CD e laboratório validados no repositório separado; documento final em consolidação.",
   "phase1_repository_url": "https://github.com/Luiz-mnt/devops-taskflow",
   "phase1_tag_url": "https://github.com/Luiz-mnt/devops-taskflow/tree/fase-1",
   "phase1_main_preserved": "2612b5d037bca23e3441deba46461ad4a487592e",
   "original_pr_action": "Manter somente o PR #1 no repositório original, sem integrar",
-  "separate_repository_publication_authorized": true
+  "separate_repository_publication_authorized": true,
+  "verification_timestamp": "2026-11-08T23:40:12.505117+00:00",
+  "documentation_ref": "main",
+  "cd_status_description": "6/6 jobs aprovados: qualidade, Terraform, provisionamento, build/scan, publicação e deploy temporário",
+  "image_config_id": "sha256:e7dc805de61db984319ecef80b03afdb954900b5ae936b39bf7be4eee69edb8f",
+  "package_url": "https://github.com/users/Luiz-mnt/packages/container/package/devops-taskflow-fase2",
+  "package_visibility": "public",
+  "anonymous_pull_result": "Aprovado com DOCKER_CONFIG temporário vazio, sem autenticação",
+  "local_published_image_ref": "ghcr.io/luiz-mnt/devops-taskflow-fase2@sha256:d25cad8350c946d5a3c1f646c1309be2fd1b6d82d1e7f83bd9924d90d8c4708d",
+  "local_smoke_result": "Imagem pública pelo digest: saúde/CRUD/métricas aprovados antes e após recriar a API.",
+  "local_monitoring_result": "Prometheus UP e consulta up=1 na imagem publicada.",
+  "logging_result": "Logs HTTP JSON reais preservados no CD e no laboratório, com rota normalizada, status e duração.",
+  "monitoring_evidence_url": "https://github.com/Luiz-mnt/devops-taskflow-fase2/blob/main/docs/evidencias/fase2-local/README.md",
+  "demonstration_result": "Falha controlada e PR corrigido no repositório original; CI/CD completo no separado; pull público, deploy, logs, Prometheus e persistência demonstrados.",
+  "results_summary": "CI/CD: 6 jobs aprovados, 38/38 testes, 100% de linhas/branches, pytest 1.22 s. Publicação e deploy pelo digest concluídos; pull anônimo, Prometheus UP e persistência local aprovados."
 }

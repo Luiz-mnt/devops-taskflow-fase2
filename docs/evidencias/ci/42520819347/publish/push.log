@@ -1,0 +1,21 @@
+The push refers to repository [ghcr.io/luiz-mnt/devops-taskflow-fase2]
+41a001c9e87e: Preparing
+d55917a0d2ff: Preparing
+05f75ed67dce: Preparing
+84aebba09ec9: Preparing
+311a92d269bd: Preparing
+5e63f01f0cee: Preparing
+a3cfe7313396: Preparing
+1d7b9dd8778e: Preparing
+5e63f01f0cee: Waiting
+a3cfe7313396: Waiting
+1d7b9dd8778e: Waiting
+311a92d269bd: Pushed
+84aebba09ec9: Pushed
+05f75ed67dce: Pushed
+41a001c9e87e: Pushed
+d55917a0d2ff: Pushed
+a3cfe7313396: Pushed
+5e63f01f0cee: Pushed
+1d7b9dd8778e: Pushed
+sha-78fe0c236a426ec035a0a2d9daea218f083316a6: digest: sha256:d25cad8350c946d5a3c1f646c1309be2fd1b6d82d1e7f83bd9924d90d8c4708d size: 1991

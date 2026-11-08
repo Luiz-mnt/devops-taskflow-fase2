@@ -1,0 +1,104 @@
+[
+    {
+        "Id": "sha256:e7dc805de61db984319ecef80b03afdb954900b5ae936b39bf7be4eee69edb8f",
+        "RepoTags": [],
+        "RepoDigests": [
+            "ghcr.io/luiz-mnt/devops-taskflow-fase2@sha256:d25cad8350c946d5a3c1f646c1309be2fd1b6d82d1e7f83bd9924d90d8c4708d"
+        ],
+        "Parent": "",
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-11-08T20:35:12.889793217Z",
+        "DockerVersion": "",
+        "Author": "",
+        "Config": {
+            "Hostname": "",
+            "Domainname": "",
+            "User": "10001:10001",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "8000/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LANG=C.UTF-8",
+                "GPG_KEY=7169605F62C751356D054A26A821E680E5FA6305",
+                "PYTHON_VERSION=3.12.16",
+                "PYTHON_SHA256=b5796915dc45ff745cfb4e990a7e7c93d6f546328a102ce31448d69ebc37575c",
+                "PYTHONDONTWRITEBYTECODE=1",
+                "PYTHONUNBUFFERED=1",
+                "PIP_NO_CACHE_DIR=1",
+                "TASKFLOW_DB_PATH=/data/taskflow.db"
+            ],
+            "Cmd": [
+                "python",
+                "-m",
+                "uvicorn",
+                "app.main:app",
+                "--host",
+                "0.0.0.0",
+                "--port",
+                "8000",
+                "--workers",
+                "1",
+                "--no-access-log"
+            ],
+            "Healthcheck": {
+                "Test": [
+                    "CMD",
+                    "python",
+                    "-c",
+                    "import json, urllib.request; response = json.load(urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=2)); assert response == {'status': 'healthy', 'database': 'ok'}"
+                ],
+                "Interval": 10000000000,
+                "Timeout": 3000000000,
+                "StartPeriod": 10000000000,
+                "Retries": 5
+            },
+            "ArgsEscaped": true,
+            "Image": "",
+            "Volumes": null,
+            "WorkingDir": "/app",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": {
+                "org.opencontainers.image.description": "Laboratório acadêmico de CI/CD, tarefas e observabilidade",
+                "org.opencontainers.image.revision": "78fe0c236a426ec035a0a2d9daea218f083316a6",
+                "org.opencontainers.image.source": "https://github.com/Luiz-mnt/devops-taskflow-fase2",
+                "org.opencontainers.image.title": "TaskFlow API"
+            }
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 140430299,
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/85cf69e1226ab091056b272d1ada189861ecb3be6f75aa341373709273c93a45/diff:/var/lib/docker/overlay2/79eb1be30e87d93b7dc9b2ec95303d6bb0e12d035d1c7e58a8c941e0cd1fc3c6/diff:/var/lib/docker/overlay2/bd35defefd9975e7603acab766fb3a3eec38804e8c7b693a16fd04caf74c6f16/diff:/var/lib/docker/overlay2/497cfd17099298248b5caec096f3fcdead75e57d16ae4fce43b104170568b269/diff:/var/lib/docker/overlay2/fbfcfad1701e163c2d5bcae8245632345fa5c198ab040729caff6179dd4ff3be/diff:/var/lib/docker/overlay2/44dea702f450125785ccca67019a10e6f664628091be784dbcfa804f83988de7/diff:/var/lib/docker/overlay2/3553872755cc8aa256b75c0c960d4812e7082dc68f3d2ef257a7d3e3a009904d/diff",
+                "MergedDir": "/var/lib/docker/overlay2/cc8e43882f1e2f9f843d925b964cf32e3c2117774ca0b106d56245f7df0f33e1/merged",
+                "UpperDir": "/var/lib/docker/overlay2/cc8e43882f1e2f9f843d925b964cf32e3c2117774ca0b106d56245f7df0f33e1/diff",
+                "WorkDir": "/var/lib/docker/overlay2/cc8e43882f1e2f9f843d925b964cf32e3c2117774ca0b106d56245f7df0f33e1/work"
+            },
+            "Name": "overlay2"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:1d7b9dd8778ebc4d9bf2f64436dd358640718cb349f5640b33bebaea4ffd62c2",
+                "sha256:a3cfe73133965fb536427fde3fe66b2949ea6178f568733760bf45f5c8b5c405",
+                "sha256:5e63f01f0cee6291b52c44ffeee48c9eb7b94cdb19478259bcfce37db9eb680e",
+                "sha256:311a92d269bd002ca4ff3d801c6320df734027d3b425ff1ec860368f12b07a26",
+                "sha256:84aebba09ec9192547d300db4a53593de2e7c94b64a32818823cede5ec38e4e7",
+                "sha256:05f75ed67dce7f0ba90887723c5ce9ebad19f0776b4d94aae8510a1325dfcbd0",
+                "sha256:d55917a0d2ff91b8bb1c8becd07f8c8562c512be93d0811e610e442e07d61e1f",
+                "sha256:41a001c9e87e5ce189291875cf92bcbaf7320be0bcc4d84e565ce5a9a2f46117"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "0001-01-01T00:00:00Z"
+        }
+    }
+]

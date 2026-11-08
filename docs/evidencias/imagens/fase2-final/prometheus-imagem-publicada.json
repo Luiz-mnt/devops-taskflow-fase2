@@ -1,0 +1,13 @@
+{
+  "file": "prometheus-imagem-publicada.png",
+  "source_url": "http://127.0.0.1:9090/targets",
+  "started_at_utc": "2026-11-08T23:38:12.184492+00:00",
+  "captured_at_utc": "2026-11-08T23:38:15.550234+00:00",
+  "dimensions": [
+    1600,
+    900
+  ],
+  "sha256": "1cc8930243102bf3ec1f1d201790ad99a7d1be3aefea9c6ed4fbebe9986ad5fa",
+  "kind": "Captura real de interface com Chrome headless, perfil isolado e sem autenticação pessoal",
+  "context": "Laboratório com imagem GHCR pelo digest validado; alvo UP confirmado pelos smoke tests."
+}

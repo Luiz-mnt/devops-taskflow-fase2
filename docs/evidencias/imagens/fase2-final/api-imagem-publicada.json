@@ -1,0 +1,13 @@
+{
+  "file": "api-imagem-publicada.png",
+  "source_url": "http://127.0.0.1:8000/docs",
+  "started_at_utc": "2026-11-08T23:38:12.185108+00:00",
+  "captured_at_utc": "2026-11-08T23:38:15.549699+00:00",
+  "dimensions": [
+    1600,
+    1000
+  ],
+  "sha256": "ddd5119b1bcaf8b2497406fb41d491467be5f44961dfd6b26dc84fea31432f32",
+  "kind": "Captura real de interface com Chrome headless, perfil isolado e sem autenticação pessoal",
+  "context": "API no laboratório local, executando o digest real publicado pelo novo CI/CD."
+}

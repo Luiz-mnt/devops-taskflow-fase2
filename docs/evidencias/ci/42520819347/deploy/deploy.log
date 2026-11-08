@@ -1,0 +1,4 @@
+NAME                                       IMAGE                                                                                                            COMMAND                  SERVICE      CREATED          STATUS                    PORTS
+taskflow-demo-42520819347-1-api-1          ghcr.io/luiz-mnt/devops-taskflow-fase2@sha256:d25cad8350c946d5a3c1f646c1309be2fd1b6d82d1e7f83bd9924d90d8c4708d   "python -m uvicorn a…"   api          11 seconds ago   Up 11 seconds (healthy)   127.0.0.1:8000->8000/tcp
+taskflow-demo-42520819347-1-prometheus-1   prom/prometheus:v3.16.0@sha256:89c1a644817e9ad70fa2af76c84898e327c1de7063735f962e8313b1e28672c3                  "/bin/prometheus --c…"   prometheus   11 seconds ago   Up 5 seconds (healthy)    127.0.0.1:9090->9090/tcp
+Deploy concluído. Execute bash scripts/smoke.sh para verificar API e Prometheus.

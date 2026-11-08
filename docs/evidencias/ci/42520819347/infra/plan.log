@@ -1,0 +1,53 @@
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # docker_network.taskflow will be created
+  + resource "docker_network" "taskflow" {
+      + driver      = "bridge"
+      + id          = (known after apply)
+      + internal    = (known after apply)
+      + ipam_driver = "default"
+      + name        = "taskflow-ci-42520819347-1-net"
+      + options     = (known after apply)
+      + scope       = (known after apply)
+
+      + ipam_config (known after apply)
+
+      + labels {
+          + label = "com.taskflow.environment"
+          + value = "taskflow-ci-42520819347-1"
+        }
+      + labels {
+          + label = "com.taskflow.managed-by"
+          + value = "terraform"
+        }
+    }
+
+  # docker_volume.taskflow will be created
+  + resource "docker_volume" "taskflow" {
+      + driver     = "local"
+      + id         = (known after apply)
+      + mountpoint = (known after apply)
+      + name       = "taskflow-ci-42520819347-1-data"
+
+      + labels {
+          + label = "com.taskflow.environment"
+          + value = "taskflow-ci-42520819347-1"
+        }
+      + labels {
+          + label = "com.taskflow.managed-by"
+          + value = "terraform"
+        }
+    }
+
+Plan: 2 to add, 0 to change, 0 to destroy.
+
+Changes to Outputs:
+  + network_id   = (known after apply)
+  + network_name = "taskflow-ci-42520819347-1-net"
+  + volume_id    = (known after apply)
+  + volume_name  = "taskflow-ci-42520819347-1-data"

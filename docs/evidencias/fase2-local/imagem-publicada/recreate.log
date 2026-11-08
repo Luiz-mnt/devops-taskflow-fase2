@@ -1,0 +1,7 @@
+ Container taskflow-api-1 Recreate 
+ api Your kernel does not support swap limit capabilities or the cgroup is not mounted. Memory limited without swap. 
+ Container taskflow-api-1 Recreated 
+ Container taskflow-api-1 Starting 
+ Container taskflow-api-1 Started 
+ Container taskflow-api-1 Waiting 
+ Container taskflow-api-1 Healthy 

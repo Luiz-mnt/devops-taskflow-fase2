@@ -1,0 +1,5 @@
+API com SQLite saudável: OK
+CRUD criar/listar/concluir: OK (id=4)
+Prometheus pronto: OK
+Alvo taskflow-api UP: OK
+{"smoke_result": "success", "task_id": 4, "monitoring_result": "up=1", "data_preserved": true}

@@ -1,0 +1,24 @@
+ghcr.io/luiz-mnt/devops-taskflow-fase2@sha256:d25cad8350c946d5a3c1f646c1309be2fd1b6d82d1e7f83bd9924d90d8c4708d: Pulling from luiz-mnt/devops-taskflow-fase2
+8e1f8f78929f: Pulling fs layer
+8691b22c22a3: Pulling fs layer
+c06bf0c240f8: Pulling fs layer
+a47be7bff94f: Pulling fs layer
+e3155a3e50c2: Pulling fs layer
+88d156875409: Pulling fs layer
+a126235ec65e: Pulling fs layer
+8fae2452fc5b: Pulling fs layer
+8691b22c22a3: Already exists
+a47be7bff94f: Already exists
+88d156875409: Already exists
+e3155a3e50c2: Download complete
+8e1f8f78929f: Download complete
+8fae2452fc5b: Download complete
+e3155a3e50c2: Pull complete
+8fae2452fc5b: Pull complete
+a126235ec65e: Download complete
+a126235ec65e: Pull complete
+8e1f8f78929f: Pull complete
+c06bf0c240f8: Download complete
+Digest: sha256:d25cad8350c946d5a3c1f646c1309be2fd1b6d82d1e7f83bd9924d90d8c4708d
+Status: Downloaded newer image for ghcr.io/luiz-mnt/devops-taskflow-fase2@sha256:d25cad8350c946d5a3c1f646c1309be2fd1b6d82d1e7f83bd9924d90d8c4708d
+ghcr.io/luiz-mnt/devops-taskflow-fase2@sha256:d25cad8350c946d5a3c1f646c1309be2fd1b6d82d1e7f83bd9924d90d8c4708d
