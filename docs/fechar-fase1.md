@@ -13,8 +13,13 @@ Os documentos finais em main consolidam as evidências depois da execução; a t
 mantém o commit verificado da implementação. Não mova a tag para acompanhar
 atualizações documentais. A fase 2 dá continuidade à API no repositório
 separado [devops-taskflow-fase2](https://github.com/Luiz-mnt/devops-taskflow-fase2),
-preservando a main, a tag e o PR #1 originais. Sua própria referência será
-criada depois da validação da fase 2.
+preservando a main, a tag e o PR #1 originais. O
+[CI/CD 42520819347](https://github.com/Luiz-mnt/devops-taskflow-fase2/actions/runs/42520819347) aprovou os seis jobs no código
+`78fe0c236a426ec035a0a2d9daea218f083316a6`, referência da tag fase-2.
+Publicação GHCR, pull anônimo e deploy local pela imagem publicada foram
+comprovados; a tarefa id 5 persistiu após recriar a API. A main da fase 2
+consolida seus documentos e provas, sem substituir os documentos finais
+já entregues da fase 1.
 
 As evidências permanentes estão em `docs/evidencias/ci/42485447573/`. O documento
 da disciplina é o PDF/PPTX final em `../entrega-fase1/`, com os links da execução,

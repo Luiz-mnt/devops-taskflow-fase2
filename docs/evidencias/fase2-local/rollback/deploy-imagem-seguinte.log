@@ -1,0 +1,58 @@
+ Image ghcr.io/luiz-mnt/devops-taskflow-fase2@sha256:640782cb89678df2d1d2969bb31a424be03cf5b62d51bafb91a4280e0459cb8b Pulling 
+ Image prom/prometheus:v3.16.0@sha256:89c1a644817e9ad70fa2af76c84898e327c1de7063735f962e8313b1e28672c3 Pulling 
+ Image prom/prometheus:v3.16.0@sha256:89c1a644817e9ad70fa2af76c84898e327c1de7063735f962e8313b1e28672c3 Pulled 
+ a47be7bff94f Pulling fs layer 0B
+ c06bf0c240f8 Pulling fs layer 0B
+ 88d156875409 Pulling fs layer 0B
+ bdf7a96cf06a Pulling fs layer 0B
+ d02f04e95f03 Pulling fs layer 0B
+ 8691b22c22a3 Pulling fs layer 0B
+ 5709fce9f422 Pulling fs layer 0B
+ 1986aa7c041d Pulling fs layer 0B
+ 8691b22c22a3 Already exists 0B
+ a47be7bff94f Already exists 0B
+ c06bf0c240f8 Already exists 0B
+ 88d156875409 Already exists 0B
+ 5709fce9f422 Download complete 0B
+ 5709fce9f422 Pull complete 0B
+ 1986aa7c041d Download complete 0B
+ 1986aa7c041d Pull complete 0B
+ d02f04e95f03 Download complete 0B
+ bdf7a96cf06a Downloading 1.049MB
+ bdf7a96cf06a Downloading 1.049MB
+ bdf7a96cf06a Downloading 1.049MB
+ bdf7a96cf06a Downloading 2.097MB
+ bdf7a96cf06a Downloading 2.097MB
+ bdf7a96cf06a Downloading 2.097MB
+ bdf7a96cf06a Downloading 3.146MB
+ bdf7a96cf06a Downloading 3.146MB
+ bdf7a96cf06a Downloading 3.146MB
+ bdf7a96cf06a Downloading 4.194MB
+ bdf7a96cf06a Downloading 4.194MB
+ bdf7a96cf06a Downloading 4.194MB
+ bdf7a96cf06a Downloading 5.243MB
+ bdf7a96cf06a Download complete 0B
+ bdf7a96cf06a Extracting 1B
+ bdf7a96cf06a Extracting 1B
+ bdf7a96cf06a Extracting 1B
+ bdf7a96cf06a Extracting 1B
+ bdf7a96cf06a Extracting 1B
+ d02f04e95f03 Pull complete 0B
+ bdf7a96cf06a Pull complete 0B
+ Image ghcr.io/luiz-mnt/devops-taskflow-fase2@sha256:640782cb89678df2d1d2969bb31a424be03cf5b62d51bafb91a4280e0459cb8b Pulled 
+ Container taskflow-prometheus-1 Running 
+ Container taskflow-api-1 Recreate 
+ api Your kernel does not support swap limit capabilities or the cgroup is not mounted. Memory limited without swap. 
+ Container taskflow-api-1 Recreated 
+ Container taskflow-api-1 Starting 
+ Container taskflow-api-1 Started 
+ Container taskflow-api-1 Waiting 
+ Container taskflow-api-1 Healthy 
+ Container taskflow-api-1 Waiting 
+ Container taskflow-prometheus-1 Waiting 
+ Container taskflow-prometheus-1 Healthy 
+ Container taskflow-api-1 Healthy 
+NAME                    IMAGE                                                                                                            COMMAND                  SERVICE      CREATED         STATUS                   PORTS
+taskflow-api-1          ghcr.io/luiz-mnt/devops-taskflow-fase2@sha256:640782cb89678df2d1d2969bb31a424be03cf5b62d51bafb91a4280e0459cb8b   "python -m uvicorn a…"   api          8 seconds ago   Up 7 seconds (healthy)   127.0.0.1:8000->8000/tcp
+taskflow-prometheus-1   prom/prometheus:v3.16.0@sha256:89c1a644817e9ad70fa2af76c84898e327c1de7063735f962e8313b1e28672c3                  "/bin/prometheus --c…"   prometheus   5 hours ago     Up 5 hours (healthy)     127.0.0.1:9090->9090/tcp
+Deploy concluído. Execute bash scripts/smoke.sh para verificar API e Prometheus.

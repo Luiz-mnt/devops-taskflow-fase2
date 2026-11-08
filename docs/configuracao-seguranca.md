@@ -93,6 +93,9 @@ recebe `packages: read` e `contents: read`, permitindo baixar um pacote privado
 sem ampliar a permissão dos demais jobs. A autenticação usa `GITHUB_TOKEN`
 fornecido pelo GitHub; tokens não são copiados para o repositório ou exemplos.
 Um repositório público não torna automaticamente o pacote GHCR público.
+Nesta entrega, a visibilidade do pacote foi definida como pública e o
+pull anônimo real foi aprovado no laboratório, com registro em
+[pull-anonimo.log](evidencias/fase2-local/imagem-publicada/pull-anonimo.log).
 
 A imagem Linux amd64 é construída uma vez e salva antes da análise. O mesmo
 arquivo é analisado e transferido como artefato com checksum. A publicação confere o arquivo e o Config ID, sem reconstruir
@@ -105,7 +108,7 @@ coletadas antes de `compose down` e `terraform destroy`, inclusive em falha.
 Essa limpeza é restrita aos recursos efêmeros do job. O laboratório local é
 persistente e independente da vida útil do runner.
 
-## Gates de segurança e resultados locais
+## Gates de segurança e resultados medidos
 
 `pip-audit` analisa o arquivo resolvido de dependências de desenvolvimento, que
 inclui as dependências de produção. Usa modo estrito, sem correção automática,
@@ -136,9 +139,43 @@ A política distingue explicitamente o que é bloqueado do risco residual aceito
 para este laboratório acadêmico. Exceções adicionais precisam de justificativa,
 escopo e validade, sem desligar os gates de forma geral.
 
-Os resultados acima são **locais**, não atribuídos a uma execução remota que
-ainda não foi observada nesta documentação. Consulte as provas e os detalhes
-atualizados em [segurança da fase 2](evidencias/fase2-security.md) e nas
-[evidências locais](evidencias/fase2-local/). Os relatórios do CD do novo repositório deverão manter
-identificados commit, digest, ambiente e URL da execução correspondente. As
-provas históricas de fase 1 e PR continuam vinculadas ao repositório original.
+Os resultados locais iniciais acima permanecem identificados com seu
+ambiente. O [CI/CD 42520819347](https://github.com/Luiz-mnt/devops-taskflow-fase2/actions/runs/42520819347) também aprovou os gates:
+pip-audit avaliou 50 pacotes Linux sem vulnerabilidades identificadas; Trivy
+registrou zero HIGH/CRITICAL corrigíveis e 42 sem correção, com inventário
+completo preservado. O
+[facts.json](evidencias/ci/42520819347/facts.json) vincula esses resultados ao
+commit `78fe0c236a426ec035a0a2d9daea218f083316a6` e à imagem
+`ghcr.io/luiz-mnt/devops-taskflow-fase2@sha256:d25cad8350c946d5a3c1f646c1309be2fd1b6d82d1e7f83bd9924d90d8c4708d`.
+
+O deploy remoto e o laboratório consumiram esse digest sem rebuild. Saúde,
+CRUD, Prometheus UP/up=1 e coleta de logs passaram. No laboratório, a tarefa
+id 5 permaneceu após recriar a API; o plan confirmou ausência de mudanças.
+As [provas locais da imagem publicada](evidencias/fase2-local/imagem-publicada/)
+documentam pull anônimo, usuário e persistência. As provas históricas de
+fase 1 e PR continuam vinculadas ao repositório original. Rollback depende
+de imagens compatíveis; a demonstração real e os digests estão registrados ao final deste documento.
+
+## Demonstração real de rollback
+
+A publicação do commit documental `ba6213b` produziu uma segunda imagem real:
+`ghcr.io/luiz-mnt/devops-taskflow-fase2@sha256:640782cb89678df2d1d2969bb31a424be03cf5b62d51bafb91a4280e0459cb8b`. O código da aplicação, Dockerfile, scripts e workflow
+permaneceram idênticos à implementação validada; a compatibilidade foi conferida
+com git diff. Os metadados de revisão e as imagens publicadas são distintos.
+Não se trata de uma nova funcionalidade da API.
+
+O laboratório implantou essa imagem, aprovou o smoke e executou rollback para
+`ghcr.io/luiz-mnt/devops-taskflow-fase2@sha256:d25cad8350c946d5a3c1f646c1309be2fd1b6d82d1e7f83bd9924d90d8c4708d`. Saúde, CRUD e Prometheus UP/up=1 passaram após a reversão;
+a tarefa id 5 continuou no volume. O banco não foi revertido ou removido.
+Provas: `docs/evidencias/fase2-local/rollback/`, incluindo os dois digests,
+metadados da execução, logs e confirmação de persistência.
+
+## Proteção da main do repositório separado
+
+A main de Luiz-mnt/devops-taskflow-fase2 exige os checks Qualidade e testes,
+Terraform e Build e seguranca da imagem, com atualização estrita, histórico
+linear e conversas resolvidas. Exclusão da branch e force-push estão proibidos.
+Administradores podem consolidar documentos diretamente neste projeto individual;
+essa exceção é explícita. A publicação da imagem continua dependendo de todos
+os gates do workflow, inclusive em um push administrativo. A configuração foi
+aplicada somente no repositório separado; a proteção da fase1 não foi alterada.

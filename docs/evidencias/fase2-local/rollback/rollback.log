@@ -1,0 +1,26 @@
+Rollback da imagem: o banco e os dados existentes serão preservados, sem reversão de esquema.
+ Image prom/prometheus:v3.16.0@sha256:89c1a644817e9ad70fa2af76c84898e327c1de7063735f962e8313b1e28672c3 Pulling 
+ Image ghcr.io/luiz-mnt/devops-taskflow-fase2@sha256:d25cad8350c946d5a3c1f646c1309be2fd1b6d82d1e7f83bd9924d90d8c4708d Pulling 
+ Image ghcr.io/luiz-mnt/devops-taskflow-fase2@sha256:d25cad8350c946d5a3c1f646c1309be2fd1b6d82d1e7f83bd9924d90d8c4708d Pulled 
+ Image prom/prometheus:v3.16.0@sha256:89c1a644817e9ad70fa2af76c84898e327c1de7063735f962e8313b1e28672c3 Pulled 
+ Container taskflow-prometheus-1 Running 
+ Container taskflow-api-1 Recreate 
+ api Your kernel does not support swap limit capabilities or the cgroup is not mounted. Memory limited without swap. 
+ Container taskflow-api-1 Recreated 
+ Container taskflow-api-1 Starting 
+ Container taskflow-api-1 Started 
+ Container taskflow-api-1 Waiting 
+ Container taskflow-api-1 Healthy 
+ Container taskflow-api-1 Waiting 
+ Container taskflow-prometheus-1 Waiting 
+ Container taskflow-prometheus-1 Healthy 
+ Container taskflow-api-1 Healthy 
+NAME                    IMAGE                                                                                                            COMMAND                  SERVICE      CREATED         STATUS                   PORTS
+taskflow-api-1          ghcr.io/luiz-mnt/devops-taskflow-fase2@sha256:d25cad8350c946d5a3c1f646c1309be2fd1b6d82d1e7f83bd9924d90d8c4708d   "python -m uvicorn a…"   api          8 seconds ago   Up 7 seconds (healthy)   127.0.0.1:8000->8000/tcp
+taskflow-prometheus-1   prom/prometheus:v3.16.0@sha256:89c1a644817e9ad70fa2af76c84898e327c1de7063735f962e8313b1e28672c3                  "/bin/prometheus --c…"   prometheus   5 hours ago     Up 5 hours (healthy)     127.0.0.1:9090->9090/tcp
+Deploy concluído. Execute bash scripts/smoke.sh para verificar API e Prometheus.
+API com SQLite saudável: OK
+CRUD criar/listar/concluir: OK (id=8)
+Prometheus pronto: OK
+Alvo taskflow-api UP: OK
+{"smoke_result": "success", "task_id": 8, "monitoring_result": "up=1", "data_preserved": true}

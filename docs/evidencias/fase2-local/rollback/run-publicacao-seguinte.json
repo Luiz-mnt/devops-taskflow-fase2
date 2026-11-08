@@ -1,0 +1,619 @@
+{
+  "conclusion": "success",
+  "event": "push",
+  "headSha": "ba6213b992de51aba0311051cec598cff4b4b78f",
+  "jobs": [
+    {
+      "completedAt": "2026-11-08T23:41:35Z",
+      "conclusion": "success",
+      "databaseId": 128901376570,
+      "name": "Qualidade e testes",
+      "startedAt": "2026-11-08T23:41:09Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-08T23:41:12Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-08T23:41:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:41:13Z",
+          "conclusion": "success",
+          "name": "Obter codigo",
+          "number": 2,
+          "startedAt": "2026-11-08T23:41:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:41:16Z",
+          "conclusion": "success",
+          "name": "Configurar Python 3.12",
+          "number": 3,
+          "startedAt": "2026-11-08T23:41:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:41:24Z",
+          "conclusion": "success",
+          "name": "Instalar dependencias fixadas",
+          "number": 4,
+          "startedAt": "2026-11-08T23:41:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:41:24Z",
+          "conclusion": "success",
+          "name": "Verificar lint",
+          "number": 5,
+          "startedAt": "2026-11-08T23:41:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:41:24Z",
+          "conclusion": "success",
+          "name": "Verificar formatacao",
+          "number": 6,
+          "startedAt": "2026-11-08T23:41:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:41:29Z",
+          "conclusion": "success",
+          "name": "Testar com cobertura minima de 80 por cento",
+          "number": 7,
+          "startedAt": "2026-11-08T23:41:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:41:30Z",
+          "conclusion": "success",
+          "name": "Auditar dependencias de producao e desenvolvimento",
+          "number": 8,
+          "startedAt": "2026-11-08T23:41:29Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:41:32Z",
+          "conclusion": "success",
+          "name": "Publicar relatorios de testes e cobertura",
+          "number": 9,
+          "startedAt": "2026-11-08T23:41:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:41:32Z",
+          "conclusion": "success",
+          "name": "Post Configurar Python 3.12",
+          "number": 17,
+          "startedAt": "2026-11-08T23:41:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:41:32Z",
+          "conclusion": "success",
+          "name": "Post Obter codigo",
+          "number": 18,
+          "startedAt": "2026-11-08T23:41:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:41:32Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-11-08T23:41:32Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/Luiz-mnt/devops-taskflow-fase2/actions/runs/42536346076/job/128901376570"
+    },
+    {
+      "completedAt": "2026-11-08T23:41:18Z",
+      "conclusion": "success",
+      "databaseId": 128901376739,
+      "name": "Terraform",
+      "startedAt": "2026-11-08T23:41:09Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-08T23:41:11Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-08T23:41:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:41:13Z",
+          "conclusion": "success",
+          "name": "Obter codigo",
+          "number": 2,
+          "startedAt": "2026-11-08T23:41:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:41:14Z",
+          "conclusion": "success",
+          "name": "Configurar Terraform",
+          "number": 3,
+          "startedAt": "2026-11-08T23:41:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:41:14Z",
+          "conclusion": "success",
+          "name": "Verificar formatacao",
+          "number": 4,
+          "startedAt": "2026-11-08T23:41:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:41:16Z",
+          "conclusion": "success",
+          "name": "Inicializar sem backend",
+          "number": 5,
+          "startedAt": "2026-11-08T23:41:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:41:16Z",
+          "conclusion": "success",
+          "name": "Validar configuracao",
+          "number": 6,
+          "startedAt": "2026-11-08T23:41:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:41:16Z",
+          "conclusion": "success",
+          "name": "Post Obter codigo",
+          "number": 12,
+          "startedAt": "2026-11-08T23:41:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:41:16Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "startedAt": "2026-11-08T23:41:16Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/Luiz-mnt/devops-taskflow-fase2/actions/runs/42536346076/job/128901376739"
+    },
+    {
+      "completedAt": "2026-11-08T23:41:59Z",
+      "conclusion": "success",
+      "databaseId": 128901495045,
+      "name": "Provisionamento efemero",
+      "startedAt": "2026-11-08T23:41:38Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-08T23:41:40Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-08T23:41:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:41:42Z",
+          "conclusion": "success",
+          "name": "Obter codigo",
+          "number": 2,
+          "startedAt": "2026-11-08T23:41:40Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:41:43Z",
+          "conclusion": "success",
+          "name": "Configurar Terraform",
+          "number": 3,
+          "startedAt": "2026-11-08T23:41:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:41:43Z",
+          "conclusion": "success",
+          "name": "Verificar daemon Docker do runner",
+          "number": 4,
+          "startedAt": "2026-11-08T23:41:43Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:41:45Z",
+          "conclusion": "success",
+          "name": "Inicializar infraestrutura efemera",
+          "number": 5,
+          "startedAt": "2026-11-08T23:41:43Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:41:45Z",
+          "conclusion": "success",
+          "name": "Planejar criacao da rede e do volume",
+          "number": 6,
+          "startedAt": "2026-11-08T23:41:45Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:41:47Z",
+          "conclusion": "success",
+          "name": "Provisionar somente os recursos efemeros",
+          "number": 7,
+          "startedAt": "2026-11-08T23:41:45Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:41:48Z",
+          "conclusion": "success",
+          "name": "Inspecionar recursos reais",
+          "number": 8,
+          "startedAt": "2026-11-08T23:41:47Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:41:50Z",
+          "conclusion": "success",
+          "name": "Confirmar plano sem alteracoes",
+          "number": 9,
+          "startedAt": "2026-11-08T23:41:48Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:41:54Z",
+          "conclusion": "success",
+          "name": "Remover apenas recursos deste runner efemero",
+          "number": 10,
+          "startedAt": "2026-11-08T23:41:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:41:56Z",
+          "conclusion": "success",
+          "name": "Publicar evidencias do provisionamento",
+          "number": 11,
+          "startedAt": "2026-11-08T23:41:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:41:56Z",
+          "conclusion": "success",
+          "name": "Post Obter codigo",
+          "number": 22,
+          "startedAt": "2026-11-08T23:41:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:41:56Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "startedAt": "2026-11-08T23:41:56Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/Luiz-mnt/devops-taskflow-fase2/actions/runs/42536346076/job/128901495045"
+    },
+    {
+      "completedAt": "2026-11-08T23:42:17Z",
+      "conclusion": "success",
+      "databaseId": 128901495160,
+      "name": "Build e seguranca da imagem",
+      "startedAt": "2026-11-08T23:41:38Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-08T23:41:41Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-08T23:41:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:41:43Z",
+          "conclusion": "success",
+          "name": "Obter codigo",
+          "number": 2,
+          "startedAt": "2026-11-08T23:41:41Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:41:57Z",
+          "conclusion": "success",
+          "name": "Construir uma unica imagem Linux amd64",
+          "number": 3,
+          "startedAt": "2026-11-08T23:41:43Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:41:58Z",
+          "conclusion": "success",
+          "name": "Salvar uma unica imagem para analisar e publicar",
+          "number": 4,
+          "startedAt": "2026-11-08T23:41:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:42:07Z",
+          "conclusion": "success",
+          "name": "Analisar vulnerabilidades da imagem completa",
+          "number": 5,
+          "startedAt": "2026-11-08T23:41:58Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:42:07Z",
+          "conclusion": "success",
+          "name": "Bloquear HIGH e CRITICAL com correcao disponivel",
+          "number": 6,
+          "startedAt": "2026-11-08T23:42:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:42:11Z",
+          "conclusion": "success",
+          "name": "Disponibilizar imagem aprovada entre jobs",
+          "number": 7,
+          "startedAt": "2026-11-08T23:42:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:42:13Z",
+          "conclusion": "success",
+          "name": "Publicar relatorios de seguranca mesmo em falha",
+          "number": 8,
+          "startedAt": "2026-11-08T23:42:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:42:14Z",
+          "conclusion": "success",
+          "name": "Post Analisar vulnerabilidades da imagem completa",
+          "number": 15,
+          "startedAt": "2026-11-08T23:42:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:42:14Z",
+          "conclusion": "success",
+          "name": "Post Obter codigo",
+          "number": 16,
+          "startedAt": "2026-11-08T23:42:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:42:14Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 17,
+          "startedAt": "2026-11-08T23:42:14Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/Luiz-mnt/devops-taskflow-fase2/actions/runs/42536346076/job/128901495160"
+    },
+    {
+      "completedAt": "2026-11-08T23:42:45Z",
+      "conclusion": "success",
+      "databaseId": 128901665736,
+      "name": "Publicar imagem aprovada no GHCR",
+      "startedAt": "2026-11-08T23:42:19Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-08T23:42:22Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-08T23:42:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:42:23Z",
+          "conclusion": "success",
+          "name": "Obter verificador do mesmo commit aprovado",
+          "number": 2,
+          "startedAt": "2026-11-08T23:42:22Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:42:27Z",
+          "conclusion": "success",
+          "name": "Recuperar somente a imagem ja aprovada",
+          "number": 3,
+          "startedAt": "2026-11-08T23:42:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:42:31Z",
+          "conclusion": "success",
+          "name": "Verificar integridade e carregar sem reconstruir",
+          "number": 4,
+          "startedAt": "2026-11-08T23:42:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:42:31Z",
+          "conclusion": "success",
+          "name": "Autenticar no GHCR com permissao de publicacao",
+          "number": 5,
+          "startedAt": "2026-11-08T23:42:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:42:40Z",
+          "conclusion": "success",
+          "name": "Publicar artefato validado e registrar digest real",
+          "number": 6,
+          "startedAt": "2026-11-08T23:42:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:42:42Z",
+          "conclusion": "success",
+          "name": "Publicar comprovantes do registry",
+          "number": 7,
+          "startedAt": "2026-11-08T23:42:40Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:42:42Z",
+          "conclusion": "success",
+          "name": "Post Autenticar no GHCR com permissao de publicacao",
+          "number": 13,
+          "startedAt": "2026-11-08T23:42:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:42:43Z",
+          "conclusion": "success",
+          "name": "Post Obter verificador do mesmo commit aprovado",
+          "number": 14,
+          "startedAt": "2026-11-08T23:42:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:42:43Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-11-08T23:42:43Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/Luiz-mnt/devops-taskflow-fase2/actions/runs/42536346076/job/128901665736"
+    },
+    {
+      "completedAt": "2026-11-08T23:43:28Z",
+      "conclusion": "success",
+      "databaseId": 128901781458,
+      "name": "Deploy temporario e smoke tests",
+      "startedAt": "2026-11-08T23:42:47Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-08T23:42:50Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-08T23:42:48Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:42:51Z",
+          "conclusion": "success",
+          "name": "Obter codigo e scripts do mesmo commit",
+          "number": 2,
+          "startedAt": "2026-11-08T23:42:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:42:53Z",
+          "conclusion": "success",
+          "name": "Configurar Terraform",
+          "number": 3,
+          "startedAt": "2026-11-08T23:42:51Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:42:54Z",
+          "conclusion": "success",
+          "name": "Autenticar para leitura inclusive de pacote privado",
+          "number": 4,
+          "startedAt": "2026-11-08T23:42:53Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:42:55Z",
+          "conclusion": "success",
+          "name": "Inicializar estado exclusivo deste runner",
+          "number": 5,
+          "startedAt": "2026-11-08T23:42:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:42:58Z",
+          "conclusion": "success",
+          "name": "Provisionar rede e volume do deploy temporario",
+          "number": 6,
+          "startedAt": "2026-11-08T23:42:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:43:14Z",
+          "conclusion": "success",
+          "name": "Implantar exclusivamente pelo digest publicado",
+          "number": 7,
+          "startedAt": "2026-11-08T23:42:58Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:43:18Z",
+          "conclusion": "success",
+          "name": "Validar saude CRUD e Prometheus UP",
+          "number": 8,
+          "startedAt": "2026-11-08T23:43:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:43:19Z",
+          "conclusion": "success",
+          "name": "Coletar evidencias antes da limpeza inclusive em falha",
+          "number": 9,
+          "startedAt": "2026-11-08T23:43:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:43:24Z",
+          "conclusion": "success",
+          "name": "Limpar somente containers e recursos efemeros deste job",
+          "number": 10,
+          "startedAt": "2026-11-08T23:43:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:43:25Z",
+          "conclusion": "success",
+          "name": "Publicar logs saude metricas e resultados do deploy",
+          "number": 11,
+          "startedAt": "2026-11-08T23:43:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:43:26Z",
+          "conclusion": "success",
+          "name": "Post Autenticar para leitura inclusive de pacote privado",
+          "number": 21,
+          "startedAt": "2026-11-08T23:43:25Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:43:26Z",
+          "conclusion": "success",
+          "name": "Post Obter codigo e scripts do mesmo commit",
+          "number": 22,
+          "startedAt": "2026-11-08T23:43:26Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-08T23:43:26Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "startedAt": "2026-11-08T23:43:26Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/Luiz-mnt/devops-taskflow-fase2/actions/runs/42536346076/job/128901781458"
+    }
+  ],
+  "status": "completed",
+  "url": "https://github.com/Luiz-mnt/devops-taskflow-fase2/actions/runs/42536346076"
+}

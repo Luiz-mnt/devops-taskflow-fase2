@@ -33,12 +33,10 @@
   "image_scan_result": "CI/CD: zero HIGH/CRITICAL corrigíveis; 40 HIGH e 2 CRITICAL sem correção informada.",
   "controlled_failure_run_url": "https://github.com/Luiz-mnt/devops-taskflow/actions/runs/42489956044",
   "pr_url": "https://github.com/Luiz-mnt/devops-taskflow/pull/1",
-  "rollback_result": "Script disponível; demonstração condicionada a um segundo digest publicado compatível. A primeira execução publicou somente uma imagem.",
+  "rollback_result": "Demonstrado entre dois digests publicados compatíveis: smoke aprovado antes/depois e tarefa id 5 preservada. Rollback da imagem não reverte o banco.",
   "persistence_result": "Imagem GHCR: tarefa id 5 preservada após recriar a API; container mudou; UID/GID 10001 confirmado.",
-  "pending_items": [
-    "Consolidar, revisar e empacotar o documento final de submissão"
-  ],
-  "delivery_ready": false,
+  "pending_items": [],
+  "delivery_ready": true,
   "measurement_commands": [
     "python -m pytest",
     "python -m pip_audit --strict --no-deps --disable-pip -r requirements-dev.txt",
@@ -241,13 +239,13 @@
   "prometheus_target_status": "UP no laboratório local",
   "integration_authorized": false,
   "requested_repository_action": "Criar repositório público separado devops-taskflow-fase2 e concluir a entrega nele",
-  "delivery_status": "Implementação, CI/CD e laboratório validados no repositório separado; documento final em consolidação.",
+  "delivery_status": "Entrega final verificada: CI/CD, imagem pública, laboratório, persistência e rollback demonstrados.",
   "phase1_repository_url": "https://github.com/Luiz-mnt/devops-taskflow",
   "phase1_tag_url": "https://github.com/Luiz-mnt/devops-taskflow/tree/fase-1",
   "phase1_main_preserved": "2612b5d037bca23e3441deba46461ad4a487592e",
   "original_pr_action": "Manter somente o PR #1 no repositório original, sem integrar",
   "separate_repository_publication_authorized": true,
-  "verification_timestamp": "2026-11-08T23:40:12.505117+00:00",
+  "verification_timestamp": "2026-11-08T23:48:32.445128+00:00",
   "documentation_ref": "main",
   "cd_status_description": "6/6 jobs aprovados: qualidade, Terraform, provisionamento, build/scan, publicação e deploy temporário",
   "image_config_id": "sha256:e7dc805de61db984319ecef80b03afdb954900b5ae936b39bf7be4eee69edb8f",
@@ -260,5 +258,8 @@
   "logging_result": "Logs HTTP JSON reais preservados no CD e no laboratório, com rota normalizada, status e duração.",
   "monitoring_evidence_url": "https://github.com/Luiz-mnt/devops-taskflow-fase2/blob/main/docs/evidencias/fase2-local/README.md",
   "demonstration_result": "Falha controlada e PR corrigido no repositório original; CI/CD completo no separado; pull público, deploy, logs, Prometheus e persistência demonstrados.",
-  "results_summary": "CI/CD: 6 jobs aprovados, 38/38 testes, 100% de linhas/branches, pytest 1.22 s. Publicação e deploy pelo digest concluídos; pull anônimo, Prometheus UP e persistência local aprovados."
+  "results_summary": "CI/CD: 6 jobs aprovados, 38/38 testes, 100% de linhas/branches, pytest 1.22 s. Publicação e deploy pelo digest concluídos; pull anônimo, Prometheus UP e persistência local aprovados.",
+  "rollback_previous_image": "ghcr.io/luiz-mnt/devops-taskflow-fase2@sha256:d25cad8350c946d5a3c1f646c1309be2fd1b6d82d1e7f83bd9924d90d8c4708d",
+  "rollback_next_image": "ghcr.io/luiz-mnt/devops-taskflow-fase2@sha256:640782cb89678df2d1d2969bb31a424be03cf5b62d51bafb91a4280e0459cb8b",
+  "rollback_evidence_url": "https://github.com/Luiz-mnt/devops-taskflow-fase2/tree/main/docs/evidencias/fase2-local/rollback"
 }

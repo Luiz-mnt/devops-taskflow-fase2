@@ -19,7 +19,7 @@ GitHub Actions e infraestrutura Docker descrita em Terraform. A fase 1 cobre
 planejamento, CI e IaC. Containers da aplicação, Prometheus e entrega contínua
 pertencem à fase 2 e não são necessários para executar esta API no ambiente virtual.
 
-## Situação da fase 2 — entrega em repositório separado
+## Fase 2 — CI/CD e implantação verificados
 
 A implementação foi validada localmente e no
 [PR #1 histórico](https://github.com/Luiz-mnt/devops-taskflow/pull/1):
@@ -27,13 +27,24 @@ A implementação foi validada localmente e no
 execução 42511228720. O último CI desse PR, 42513263161, também aprovou
 qualidade, Terraform e build/scan; publicação e deploy foram omitidos no PR.
 
-A conclusão do CD será feita na main de devops-taskflow-fase2, sem integrar
-o PR no repositório original. A publicação GHCR, o deploy automatizado, o
-digest e a tag fase-2 permanecem pendentes de comprovação neste relatório.
-A apresentação existente é uma prévia até a consolidação dos resultados
-dessa execução e do PDF final.
+O [CI/CD 42520819347](https://github.com/Luiz-mnt/devops-taskflow-fase2/actions/runs/42520819347) aprovou os **seis jobs** em 08/11/2026,
+no commit `78fe0c236a426ec035a0a2d9daea218f083316a6`: qualidade/testes, Terraform,
+provisionamento efêmero, build/scan, publicação GHCR e deploy temporário.
+Foram medidos **38 testes, 100% de linhas/branches e pytest em 1,22 s** no
+runner Linux. Pip-audit avaliou 50 pacotes, sem vulnerabilidades identificadas;
+o scan da imagem registrou zero HIGH/CRITICAL corrigíveis e 42 sem correção.
 
-[Workflow da fase 2](https://github.com/Luiz-mnt/devops-taskflow-fase2/blob/main/.github/workflows/ci.yml) ·
+A imagem publicada foi baixada anonimamente e implantada no WSL2 pelo
+mesmo digest, sem rebuild. Saúde, CRUD e Prometheus `up=1` passaram; a
+tarefa id 5 permaneceu após recriar a API e o Terraform confirmou plano
+sem mudanças. As [provas do CD](docs/evidencias/ci/42520819347/facts.json) e
+[provas locais da imagem publicada](docs/evidencias/fase2-local/imagem-publicada/)
+preservam esses resultados. O repositório original e seu PR não foram integrados.
+
+O [código validado na tag fase-2](https://github.com/Luiz-mnt/devops-taskflow-fase2/tree/fase-2)
+é a referência da tag fase-2. Os [documentos atuais](https://github.com/Luiz-mnt/devops-taskflow-fase2/tree/main/docs)
+ficam em main para incorporar as evidências produzidas depois da execução.
+[Workflow executado](https://github.com/Luiz-mnt/devops-taskflow-fase2/blob/78fe0c236a426ec035a0a2d9daea218f083316a6/.github/workflows/ci.yml) ·
 [Actions da fase 2](https://github.com/Luiz-mnt/devops-taskflow-fase2/actions).
 
 [Relatório factual](docs/relatorio-fase2.md) ·
@@ -153,8 +164,9 @@ acessível comprovam provisionamento. O CI está configurado para executar uma
 demonstração em runner efêmero, com prefixo exclusivo e limpeza desses recursos.
 A demonstração da fase 1 foi aprovada na execução histórica 42485447573,
 incluindo inspeções, plano sem alterações e limpeza dos recursos efêmeros.
-O provisionamento da nova execução de CD da fase 2 será registrado
-separadamente. O laboratório WSL2 local foi comprovado e permanece preservado.
+Na fase 2, o CI/CD 42520819347 também aprovou provisionamento, inspeções,
+plano sem alterações e limpeza do runner. O laboratório WSL2 foi validado
+com a imagem publicada, continua persistente e não sofreu destroy.
 
 Não há `destroy` automático do laboratório local. Alterar o prefixo pode planejar
 a substituição do volume: revise o plano antes de aplicar para preservar dados.
@@ -237,13 +249,13 @@ somente leitura, capabilities removidas e sem socket Docker montado.
 
 ## Fase 2 — imagem publicada, segurança e rollback
 
-Use o digest real registrado em docs/evidencias/ e nos artefatos do workflow.
-Para pacote público, docker pull funciona sem login. Se privado, autentique
-pelo fluxo oficial do registry com read:packages; não coloque tokens no Git.
-A visibilidade do repositório não determina automaticamente a do pacote.
+A referência abaixo foi publicada pelo CI/CD 42520819347 e validada no
+laboratório. O pacote GHCR está público e seu pull anônimo foi aprovado,
+sem credenciais. O digest do registry e o Config ID da imagem têm funções
+distintas; os dois constam nos comprovantes da publicação.
 
 ```bash
-export IMAGE_REF=ghcr.io/luiz-mnt/devops-taskflow-fase2@sha256:DIGEST_REAL_DO_RELATORIO
+export IMAGE_REF=ghcr.io/luiz-mnt/devops-taskflow-fase2@sha256:d25cad8350c946d5a3c1f646c1309be2fd1b6d82d1e7f83bd9924d90d8c4708d
 docker pull "$IMAGE_REF"
 bash scripts/deploy.sh
 bash scripts/smoke.sh
@@ -251,9 +263,10 @@ bash scripts/smoke.sh
 bash scripts/rollback.sh ghcr.io/luiz-mnt/devops-taskflow-fase2@sha256:DIGEST_ANTERIOR
 ```
 
-Substitua os nomes em maiúsculas pelos digests medidos no relatório. O caminho
-de deploy não faz build. Rollback reimplanta uma imagem e preserva o banco;
-ele não reverte esquema nem restaura dados. Revise compatibilidade antes de usar.
+O caminho de deploy não faz build. Nesta entrega o rollback foi demonstrado entre duas imagens publicadas compatíveis.
+Para reproduzir, use os digests reais registrados abaixo. Rollback
+preserva o banco, não reverte esquema nem restaura dados. Essa demonstração
+condicional não é uma pendência obrigatória do enunciado.
 
 Auditoria de dependências: python -m pip_audit --strict --no-deps --disable-pip
 -r requirements-dev.txt. A política de imagem mantém o inventário completo e
@@ -263,3 +276,17 @@ Não há supressão geral de falhas ou lista de CVEs ignoradas.
 
 [Planejamento da fase 2](docs/planejamento-fase2.md) ·
 [Contrato HTTP](docs/contrato-api.md).
+
+## Demonstração real de rollback
+
+A publicação do commit documental `ba6213b` produziu uma segunda imagem real:
+`ghcr.io/luiz-mnt/devops-taskflow-fase2@sha256:640782cb89678df2d1d2969bb31a424be03cf5b62d51bafb91a4280e0459cb8b`. O código da aplicação, Dockerfile, scripts e workflow
+permaneceram idênticos à implementação validada; a compatibilidade foi conferida
+com git diff. Os metadados de revisão e as imagens publicadas são distintos.
+Não se trata de uma nova funcionalidade da API.
+
+O laboratório implantou essa imagem, aprovou o smoke e executou rollback para
+`ghcr.io/luiz-mnt/devops-taskflow-fase2@sha256:d25cad8350c946d5a3c1f646c1309be2fd1b6d82d1e7f83bd9924d90d8c4708d`. Saúde, CRUD e Prometheus UP/up=1 passaram após a reversão;
+a tarefa id 5 continuou no volume. O banco não foi revertido ou removido.
+Provas: `docs/evidencias/fase2-local/rollback/`, incluindo os dois digests,
+metadados da execução, logs e confirmação de persistência.

@@ -1,4 +1,4 @@
-# Relatório do projeto — fase 2 em consolidação
+# Relatório do projeto — fases 1 e 2 verificadas
 
 Aluno: Luiz Eduardo Santos Monteiro. Disciplina: DevOps na Prática, PUCRS.
 Repositório da fase 2: https://github.com/Luiz-mnt/devops-taskflow-fase2
@@ -6,9 +6,12 @@ Repositório da fase 2: https://github.com/Luiz-mnt/devops-taskflow-fase2
 Este relatório registra a implementação e as provas observadas. A conclusão
 da fase 2 foi autorizada em repositório separado, preservando a main, a tag
 fase-1 e o PR #1 do [repositório original](https://github.com/Luiz-mnt/devops-taskflow).
-A publicação GHCR, o CD em main e a referência fase-2 serão registrados
-com as execuções do novo repositório. Seus resultados ainda estão pendentes
-de consolidação; a fase 2 não está declarada pronta para submissão.
+O [CI/CD 42520819347](https://github.com/Luiz-mnt/devops-taskflow-fase2/actions/runs/42520819347) aprovou os seis jobs em 08/11/2026,
+no commit `78fe0c236a426ec035a0a2d9daea218f083316a6`. A imagem foi publicada no GHCR e
+implantada pelo digest no runner e no laboratório local. As provas do CD
+e do laboratório estão preservadas no projeto. O código validado é a
+referência da tag fase-2; a main consolida os documentos e as evidências
+produzidos após essa execução.
 
 ## Projeto e fase 1
 
@@ -32,8 +35,8 @@ Linux amd64 é construída uma única vez e salva antes da análise. Trivy exami
 esse arquivo; checksum e Config ID independente vinculam o artefato aprovado à
 publicação, sem reconstrução. O job de publicação aceita somente push/manual
 na main do repositório da fase 2 e depende dos gates e da prova de
-provisionamento efêmero. Essas etapas ainda aguardam resultados observados
-neste relatório.
+provisionamento efêmero. As etapas de publicação e deploy foram executadas
+e aprovadas no run 42520819347.
 
 GHCR recebe tag sha-commit e disponibiliza o digest real. O job dependente
 deploy-demo utiliza o digest, cria rede e volume em um runner independente,
@@ -65,6 +68,35 @@ no volume externo /data; o histórico do Prometheus é temporário, em tmpfs de
 256 MiB e retenção temporal de seis horas. Limites de memória/CPU e políticas
 de reinício estão definidos. Não há socket Docker montado nos containers.
 
+## Resultados do CD e da imagem publicada
+
+A execução real de push em main no novo repositório aprovou qualidade/testes,
+Terraform, provisionamento efêmero, build/scan, publicação GHCR e deploy
+temporário. O runner coletou provas antes de remover seus próprios recursos.
+
+| Verificação | Origem | Resultado |
+|---|---|---|
+| CI/CD completo | Run 42520819347, commit 78fe0c2 | Seis jobs aprovados |
+| Testes e cobertura | Runner Linux, Python 3.12.16 | 38 aprovados; 131/131 linhas; 8/8 branches; pytest 1,22 s; JUnit 1,230 s |
+| Auditoria de dependências | Pip-audit do CD | 50 pacotes; zero vulnerabilidades identificadas |
+| Scan de imagem | Trivy e gate obrigatório do CD | Zero HIGH/CRITICAL corrigíveis; 40 HIGH e 2 CRITICAL sem correção |
+| Publicação | GHCR | Mesma imagem aprovada, checksum/Config ID conferidos sem rebuild; digest registrado |
+| Deploy temporário | Runner independente | Saúde SQLite, CRUD, métricas e Prometheus UP/up=1 aprovados; limpeza aprovada |
+| Pull local | WSL2, pacote público | Download anônimo por digest aprovado |
+| Deploy local | Imagem publicada, sem rebuild | API e Prometheus saudáveis; CRUD e up=1 aprovados |
+| Persistência local | Recriação do container API | Container mudou e tarefa id 5 permaneceu; UID/GID 10001 |
+| Infraestrutura local | Terraform, estado ativo da fase 2 | Plan sem mudanças; rede e volume preservados |
+| Rollback | Duas imagens publicadas compatíveis | Demonstrado: smoke aprovado e tarefa id 5 preservada |
+
+Imagem validada: `ghcr.io/luiz-mnt/devops-taskflow-fase2@sha256:d25cad8350c946d5a3c1f646c1309be2fd1b6d82d1e7f83bd9924d90d8c4708d`.
+
+O Config ID `sha256:e7dc805de61db984319ecef80b03afdb954900b5ae936b39bf7be4eee69edb8f`
+vincula a configuração da imagem analisada à publicada. Ele é diferente do
+digest do manifesto do registry e não deve ser confundido com esse digest.
+As provas estão em [facts.json](evidencias/ci/42520819347/facts.json), nos
+artefatos preservados do run e nos
+[registros locais da imagem publicada](evidencias/fase2-local/imagem-publicada/).
+
 ## Resultados locais e históricos do PR original
 
 As execuções de PR desta seção pertencem a Luiz-mnt/devops-taskflow. Elas
@@ -89,8 +121,6 @@ deploy foram omitidos nesse evento.
 | Infraestrutura | Estado ativo da fase 2 | Rede/volume existentes; plan sem mudanças, exit 0 |
 | Falha controlada | PR original, execução 42489956044 | 1 falha intencional e 32 testes aprovados; CI bloqueou; teste removido e correção validada |
 | PR corrigido | Execução 42511228720 | Qualidade, Terraform e build/scan aprovados; publicação/CD omitidos corretamente em PR |
-| Publicação e CD por digest | Repositório devops-taskflow-fase2 | Resultados ainda pendentes de consolidação |
-| Rollback por digest | Quando houver duas imagens compatíveis | Script preparado; demonstração ainda não executada |
 
 O pacote colorama, condicionado ao Windows, explica a diferença 51/50 entre
 as auditorias. Tempos local e remoto são medições distintas e não sustentam
@@ -110,11 +140,11 @@ estão fixadas por SHA/digest. Containers usam filesystem raiz somente leitura,
 capabilities removidas e no-new-privileges. Não há autenticação/TLS porque o
 ambiente é um laboratório local em loopback, sem implantação pública permanente.
 
-As provas mostram testes reproduzíveis, bloqueio de falhas, integridade da
-imagem e preservação dos dados no laboratório. Ainda é necessário concluir
-o ciclo remoto main → GHCR → deploy no repositório devops-taskflow-fase2
-e registrar seus resultados antes da entrega. Esse fluxo não depende de
-alteração ou merge no repositório original.
+As provas confirmam testes reproduzíveis, bloqueio de falhas, integridade
+da imagem, publicação e deploy pelo mesmo digest. O ciclo remoto
+main → GHCR → deploy foi concluído no repositório devops-taskflow-fase2.
+O laboratório consumiu essa imagem e preservou os dados ao recriar a API.
+Nenhum desses resultados dependeu de alteração ou merge no repositório original.
 
 ## Fluxograma, demonstração e melhorias
 
@@ -129,3 +159,17 @@ alertas e armazenamento durável do Prometheus; HTTPS/autenticação para um
 ambiente exposto; atualização contínua de bases e triagem de vulnerabilidades;
 aprovação de ambientes e implantação permanente. Rollback de imagem não
 equivale a restauração de banco, nem garante compatibilidade entre esquemas.
+
+## Demonstração real de rollback
+
+A publicação do commit documental `ba6213b` produziu uma segunda imagem real:
+`ghcr.io/luiz-mnt/devops-taskflow-fase2@sha256:640782cb89678df2d1d2969bb31a424be03cf5b62d51bafb91a4280e0459cb8b`. O código da aplicação, Dockerfile, scripts e workflow
+permaneceram idênticos à implementação validada; a compatibilidade foi conferida
+com git diff. Os metadados de revisão e as imagens publicadas são distintos.
+Não se trata de uma nova funcionalidade da API.
+
+O laboratório implantou essa imagem, aprovou o smoke e executou rollback para
+`ghcr.io/luiz-mnt/devops-taskflow-fase2@sha256:d25cad8350c946d5a3c1f646c1309be2fd1b6d82d1e7f83bd9924d90d8c4708d`. Saúde, CRUD e Prometheus UP/up=1 passaram após a reversão;
+a tarefa id 5 continuou no volume. O banco não foi revertido ou removido.
+Provas: `docs/evidencias/fase2-local/rollback/`, incluindo os dois digests,
+metadados da execução, logs e confirmação de persistência.

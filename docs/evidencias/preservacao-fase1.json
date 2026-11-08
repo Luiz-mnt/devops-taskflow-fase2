@@ -1,0 +1,21 @@
+{
+  "verified_at_utc": "2026-11-08T23:51:47.198958+00:00",
+  "preserved": true,
+  "repository_url": "https://github.com/Luiz-mnt/devops-taskflow",
+  "main_commit": "2612b5d037bca23e3441deba46461ad4a487592e",
+  "phase1_tag": "fase-1",
+  "phase1_tag_object": "136f6c6373b5e19ef57688a4fae5abe7e8e48e93",
+  "phase1_implementation_commit": "30b49c595e931f1ea6c2e122ba4ca25ead004b48",
+  "original_pr": {
+    "headRefOid": "97372dd00d8a13ca78ed6d99881a41266801966d",
+    "isDraft": true,
+    "mergedAt": null,
+    "state": "OPEN",
+    "url": "https://github.com/Luiz-mnt/devops-taskflow/pull/1"
+  },
+  "phase1_artifact_sha256": {
+    "Fase_1_DevOps_Luiz_Monteiro.pdf": "548577bec2ecb6c7ea7ed354943e8add695bfa0be3fa9e175bac3f2099b3f6d8",
+    "Fase_1_DevOps_Luiz_Monteiro.pptx": "a7a7a70e0fe2fca0fa08e3d05cab56b279f1d50c0caad668e1e05c8c45ac3dc7",
+    "PACOTE_FASE_1.zip": "9d21ba00479acb359e50ab69f4fd69b4ed0cdd0d899d27ea8a0cefef0702a44c"
+  }
+}

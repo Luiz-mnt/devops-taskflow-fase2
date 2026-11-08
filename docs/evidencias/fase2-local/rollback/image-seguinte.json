@@ -1,0 +1,8 @@
+{
+  "commit": "ba6213b992de51aba0311051cec598cff4b4b78f",
+  "tag": "ghcr.io/luiz-mnt/devops-taskflow-fase2:sha-ba6213b992de51aba0311051cec598cff4b4b78f",
+  "image_ref": "ghcr.io/luiz-mnt/devops-taskflow-fase2@sha256:640782cb89678df2d1d2969bb31a424be03cf5b62d51bafb91a4280e0459cb8b",
+  "image_digest": "sha256:640782cb89678df2d1d2969bb31a424be03cf5b62d51bafb91a4280e0459cb8b",
+  "image_config_id": "sha256:fef7431d97b917f882b517a720b42e48aa9a7d485664070ae2df98515f939a18",
+  "docker_image_id": "sha256:fef7431d97b917f882b517a720b42e48aa9a7d485664070ae2df98515f939a18"
+}
